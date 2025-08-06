@@ -1,0 +1,75 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Spatial",
+"class": "rotate_H_positioner",
+"language": "GDScript",
+"path": "res://components_lib/frame_for_positioner/scripts/frame_for_positioner.gd"
+} ]
+_global_script_class_icons={
+"rotate_H_positioner": ""
+}
+
+[Rcs]
+
+screenshots_folder="res://screenshots"
+ProcessManager/launch_HMI_at_startup=false
+ProcessManager/divide_into_subprojects=true
+ProcessManager/default_subproject=""
+ProcessManager/disabled_rcs_processes=""
+ProcessManager/hidden_rcs_projects=""
+ProcessManager/launch_hmi=0
+
+[application]
+
+config/name="task_1"
+config/icon="res://icon.png"
+
+[grid]
+
+adjust_to_scene_size=false
+xz/display_plane=true
+xz/display_orthogonally=false
+xz/grid_size=10000
+xz/primary_grid_step=1000
+xz/primary_grid_color=Color( 0.07, 0.07, 0.07, 1 )
+xz/show_secondary_step=true
+xz/secondary_grid_step=250
+xz/secondary_grid_color=Color( 0.38, 0.38, 0.38, 1 )
+xy/display_plane=true
+xy/display_orthogonally=true
+xy/grid_size=10000
+xy/primary_grid_step=1000
+xy/primary_grid_color=Color( 0.07, 0.07, 0.07, 1 )
+xy/show_secondary_step=true
+xy/secondary_grid_step=250
+xy/secondary_grid_color=Color( 0.38, 0.38, 0.38, 1 )
+yz/display_plane=true
+yz/display_orthogonally=true
+yz/grid_size=10000
+yz/primary_grid_step=1000
+yz/primary_grid_color=Color( 0.07, 0.07, 0.07, 1 )
+yz/show_secondary_step=true
+yz/secondary_grid_step=250
+yz/secondary_grid_color=Color( 0.38, 0.38, 0.38, 1 )
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
+
+[video_recording]
+
+save_folder="res://video_records"
+target_fps=40
+quality_preset=1
+width=1920
+height=1080
+disable_gizmo=false

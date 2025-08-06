@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component_meta>
+<name>a220_2700</name>
+<name>c676d548-610f-4e71-8173-a73eb356d522</name>
+<developer>eidos</developer>
+<version>1</version>
+<description>Default scene for a a200/2700 robot without signals and safety configuration.</description>
+</component_meta>
