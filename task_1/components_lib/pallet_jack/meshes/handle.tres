@@ -1,0 +1,11 @@
+[gd_resource type="CylinderMesh" load_steps=2 format=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.960784, 0.960784, 0.960784, 1 )
+metallic_specular = 0.0
+
+[resource]
+material = SubResource( 1 )
+top_radius = 20.0
+bottom_radius = 20.0
+height = 950.0

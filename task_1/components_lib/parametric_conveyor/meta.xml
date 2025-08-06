@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component_meta>
+<name>parametic_conveyor</name>
+<developer>eidos</developer>
+<version>1</version>
+<description>Parametic conveyor. Can adjust the length, height, width of the conveyor; number of legs; board height; the presence of boards, engines</description>
+</component_meta>

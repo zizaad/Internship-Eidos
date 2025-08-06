@@ -1,0 +1,457 @@
+[gd_scene load_steps=45 format=2]
+
+[ext_resource path="res://components_lib/pallet_jack/scripts/Pallet_jack.gd" type="Script" id=1]
+[ext_resource path="res://components_lib/pallet_jack/materials/grey3.tres" type="Material" id=2]
+[ext_resource path="res://components_lib/pallet_jack/materials/grey2.tres" type="Material" id=3]
+[ext_resource path="res://components_lib/pallet_jack/materials/black.tres" type="Material" id=4]
+[ext_resource path="res://components_lib/pallet_jack/materials/grey.tres" type="Material" id=5]
+[ext_resource path="res://components_lib/pallet_jack/materials/mat_5.material" type="Material" id=6]
+[ext_resource path="res://components_lib/pallet_jack/materials/grey4.tres" type="Material" id=7]
+[ext_resource path="res://components_lib/pallet_jack/materials/yellow.tres" type="Material" id=8]
+
+[sub_resource type="PrismMesh" id=1]
+left_to_right = 0.0
+size = Vector3( 250, 300, 400 )
+
+[sub_resource type="CubeMesh" id=2]
+size = Vector3( 1360, 80, 180 )
+
+[sub_resource type="CubeMesh" id=3]
+size = Vector3( 120, 200, 386 )
+
+[sub_resource type="CubeMesh" id=4]
+size = Vector3( 200, 30, 300 )
+
+[sub_resource type="CylinderMesh" id=5]
+top_radius = 15.0
+bottom_radius = 15.0
+height = 390.0
+
+[sub_resource type="CylinderMesh" id=6]
+top_radius = 60.0
+bottom_radius = 60.0
+height = 200.0
+
+[sub_resource type="CylinderMesh" id=7]
+top_radius = 100.0
+bottom_radius = 100.0
+height = 300.0
+
+[sub_resource type="CubeMesh" id=8]
+size = Vector3( 100, 20, 200 )
+
+[sub_resource type="CylinderMesh" id=9]
+top_radius = 50.0
+bottom_radius = 50.0
+height = 20.0
+
+[sub_resource type="CylinderMesh" id=10]
+top_radius = 50.0
+bottom_radius = 50.0
+height = 20.0
+
+[sub_resource type="CylinderMesh" id=11]
+top_radius = 60.0
+bottom_radius = 60.0
+height = 160.0
+
+[sub_resource type="CylinderMesh" id=12]
+top_radius = 50.0
+bottom_radius = 50.0
+height = 280.0
+
+[sub_resource type="SphereMesh" id=13]
+material = ExtResource( 3 )
+radius = 45.0
+height = 100.0
+
+[sub_resource type="SpatialMaterial" id=14]
+albedo_color = Color( 0.960784, 0.960784, 0.960784, 1 )
+metallic_specular = 0.0
+
+[sub_resource type="CylinderMesh" id=15]
+material = SubResource( 14 )
+top_radius = 20.0
+bottom_radius = 20.0
+height = 950.0
+
+[sub_resource type="CylinderMesh" id=16]
+top_radius = 20.0
+bottom_radius = 20.0
+height = 300.0
+
+[sub_resource type="SphereMesh" id=17]
+radius = 20.0
+height = 40.0
+
+[sub_resource type="CylinderMesh" id=18]
+material = ExtResource( 5 )
+top_radius = 20.0
+bottom_radius = 20.0
+height = 55.0
+
+[sub_resource type="CapsuleMesh" id=19]
+radius = 20.0
+mid_height = 58.0
+
+[sub_resource type="CylinderMesh" id=20]
+top_radius = 20.0
+bottom_radius = 20.0
+height = 50.0
+
+[sub_resource type="CapsuleMesh" id=21]
+radius = 20.0
+mid_height = 30.0
+
+[sub_resource type="CylinderMesh" id=22]
+material = ExtResource( 5 )
+top_radius = 20.0
+bottom_radius = 15.0
+height = 100.0
+
+[sub_resource type="CapsuleMesh" id=23]
+radius = 15.0
+mid_height = 55.0
+
+[sub_resource type="CylinderMesh" id=24]
+material = ExtResource( 4 )
+top_radius = 7.0
+bottom_radius = 7.0
+height = 70.0
+
+[sub_resource type="SphereMesh" id=25]
+material = ExtResource( 4 )
+radius = 7.0
+height = 14.0
+
+[sub_resource type="CylinderMesh" id=26]
+top_radius = 7.0
+bottom_radius = 4.0
+height = 15.0
+
+[sub_resource type="SphereMesh" id=27]
+material = ExtResource( 7 )
+radius = 7.0
+height = 14.0
+
+[sub_resource type="SphereMesh" id=28]
+material = ExtResource( 7 )
+radius = 12.0
+height = 24.0
+
+[sub_resource type="CubeMesh" id=29]
+size = Vector3( 120, 70, 200 )
+
+[sub_resource type="CylinderMesh" id=30]
+top_radius = 100.0
+bottom_radius = 100.0
+height = 40.0
+
+[sub_resource type="CylinderMesh" id=31]
+material = ExtResource( 6 )
+top_radius = 7.0
+bottom_radius = 110.0
+height = 300.0
+
+[sub_resource type="CylinderMesh" id=32]
+top_radius = 90.0
+bottom_radius = 90.0
+height = 30.0
+
+[sub_resource type="CylinderMesh" id=33]
+top_radius = 90.0
+bottom_radius = 20.0
+height = 45.0
+
+[sub_resource type="CylinderMesh" id=34]
+top_radius = 60.0
+bottom_radius = 60.0
+height = 100.0
+
+[sub_resource type="CubeMesh" id=35]
+size = Vector3( 240, 78, 565 )
+
+[sub_resource type="PrismMesh" id=36]
+size = Vector3( 386, 230, 50 )
+
+[node name="pallet_jack" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -309.705, 0, 0 )
+script = ExtResource( 1 )
+scale_of_fork = 2000.0
+degrees = 50.0
+
+[node name="Base" type="MeshInstance" parent="."]
+transform = Transform( 0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 1, 325, 244.83, -0.975 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 8 )
+
+[node name="Rfork" type="MeshInstance" parent="Base"]
+transform = Transform( 1.47059, -1.81899e-11, 9.31322e-10, 2.67499e-11, 1, -2.32831e-10, -1.36959e-09, 2.32831e-10, 1, 999.908, -177.706, -200.546 )
+mesh = SubResource( 2 )
+material/0 = ExtResource( 6 )
+
+[node name="Lfork" type="MeshInstance" parent="Base"]
+transform = Transform( 1.47059, -1.90812e-09, -8.3819e-09, 2.80606e-09, 1, -3.72529e-09, 1.23263e-08, 3.72529e-09, 1, 999.908, -177.706, 193.158 )
+mesh = SubResource( 2 )
+material/0 = ExtResource( 6 )
+
+[node name="base_box" type="MeshInstance" parent="Base"]
+transform = Transform( 1, -1.56815e-08, 2.23517e-08, -2.73394e-09, 1, 9.31323e-10, 8.3819e-09, 6.51926e-09, 1, -62.341, 48.8211, -1.72543 )
+mesh = SubResource( 3 )
+material/0 = ExtResource( 6 )
+
+[node name="base_plate" type="MeshInstance" parent="Base"]
+transform = Transform( 0.999931, -0.009157, 0.007821, 0.0091338, 0.999958, 0.00299689, -0.0078481, -0.00292524, 0.999965, -174.305, -131.431, 0.751675 )
+mesh = SubResource( 4 )
+material/0 = ExtResource( 6 )
+
+[node name="axle" type="MeshInstance" parent="Base"]
+transform = Transform( 0.999999, -0.00131412, -0.00171037, -0.00171035, 1.54534e-05, -1, 0.00131412, 1, 1.32062e-05, -263.162, -182.642, 0 )
+mesh = SubResource( 5 )
+material/0 = ExtResource( 3 )
+
+[node name="axle_cylinder" type="MeshInstance" parent="Base"]
+transform = Transform( 1, -0.00130902, -1.34623e-08, -8.62201e-10, -1.67638e-07, -1, 0.001309, 1, -1.64146e-07, -261, -178.228, 0 )
+mesh = SubResource( 6 )
+material/0 = ExtResource( 6 )
+
+[node name="base_cylinder" type="MeshInstance" parent="Base"]
+transform = Transform( 1, -0.00130902, -1.2531e-08, -8.62201e-10, -1.6694e-07, -1, 0.001309, 1, -1.64146e-07, -98.3479, -100.941, 0.82272 )
+mesh = SubResource( 7 )
+material/0 = ExtResource( 6 )
+
+[node name="jack_plate1" type="MeshInstance" parent="Base"]
+transform = Transform( 1, 9.82254e-11, 0, 1.45519e-11, 1, 0, -9.31323e-10, 0, 1, -241.155, -107.75, 3.1844 )
+mesh = SubResource( 8 )
+material/0 = ExtResource( 5 )
+
+[node name="jack_plate2" type="MeshInstance" parent="Base"]
+transform = Transform( 1, -1.75478e-08, 2.79397e-08, -2.71757e-09, 1, 9.31323e-10, 1.58325e-08, 6.75209e-09, 1, -241.482, -107.634, 95.224 )
+mesh = SubResource( 9 )
+material/0 = ExtResource( 5 )
+
+[node name="jack_plate3" type="MeshInstance" parent="Base"]
+transform = Transform( 1, -1.75605e-08, 2.98023e-08, -1.78079e-09, 1, 9.31323e-10, 2.04891e-08, 6.28643e-09, 1, -241.187, -107.645, -94.6056 )
+mesh = SubResource( 10 )
+material/0 = ExtResource( 5 )
+
+[node name="jack_cylinder1" type="MeshInstance" parent="Base"]
+transform = Transform( 1, -8.28004e-09, 1.49012e-08, -1.81899e-09, 1, 9.31323e-10, 1.02445e-08, 3.0268e-09, 1, -243.257, -63.8396, 2.09391 )
+mesh = SubResource( 11 )
+material/0 = ExtResource( 2 )
+
+[node name="jack_cylinder2" type="MeshInstance" parent="Base"]
+transform = Transform( 1, -1.47757e-08, 2.6077e-08, -1.7917e-09, 1, 9.31323e-10, 1.86265e-08, 5.82077e-09, 1, -270, -35, 0 )
+mesh = SubResource( 12 )
+material/0 = ExtResource( 2 )
+
+[node name="hinge" type="MeshInstance" parent="Base/jack_cylinder2"]
+transform = Transform( 0.642787, -0.766044, 1.86264e-08, 0.766044, 0.642787, 5.82077e-09, -1.64318e-08, 1.05271e-08, 1, -1.90735e-05, 160.482, 0 )
+mesh = SubResource( 13 )
+material/0 = null
+
+[node name="handle" type="MeshInstance" parent="Base/jack_cylinder2/hinge"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 469.061, 0 )
+redirect_selection = true
+mesh = SubResource( 15 )
+skeleton = NodePath("")
+material/0 = ExtResource( 3 )
+
+[node name="steering_wheel" type="MeshInstance" parent="Base/jack_cylinder2/hinge/handle"]
+transform = Transform( 1, 0, 0, 0, -1.62922e-07, -1, 0, 1.00001, -1.62921e-07, 0, 481.358, 0 )
+redirect_selection = true
+mesh = SubResource( 16 )
+material/0 = ExtResource( 5 )
+
+[node name="Lsteering_wheel_cover" type="MeshInstance" parent="Base/jack_cylinder2/hinge/handle/steering_wheel"]
+transform = Transform( 0.999999, 1.30385e-08, -2.15878e-08, -1.30385e-08, 0.999999, -1.49012e-08, 3.96903e-08, -1.02445e-08, 0.999998, 0, 151.162, -0.0523682 )
+redirect_selection = true
+mesh = SubResource( 17 )
+material/0 = ExtResource( 5 )
+
+[node name="Lswc1" type="MeshInstance" parent="Base/jack_cylinder2/hinge/handle/steering_wheel/Lsteering_wheel_cover"]
+transform = Transform( 1, 1.29339e-08, 3.63184e-09, -1.85286e-08, 0.858132, -0.513438, -1.23257e-08, 0.513438, 0.858128, 0.0868301, 24.9481, 14.8936 )
+mesh = SubResource( 18 )
+material/0 = null
+
+[node name="Lswc2" type="MeshInstance" parent="Base/jack_cylinder2/hinge/handle/steering_wheel/Lsteering_wheel_cover/Lswc1"]
+transform = Transform( 1, -0.000171653, 2.8204e-05, 0.000133102, 0.859739, 0.510726, -0.000112134, -0.510725, 0.859741, 0, 42.5691, 24.8229 )
+redirect_selection = true
+mesh = SubResource( 19 )
+material/0 = ExtResource( 5 )
+
+[node name="Lswc3" type="MeshInstance" parent="Base/jack_cylinder2/hinge/handle/steering_wheel/Lsteering_wheel_cover/Lswc1/Lswc2"]
+transform = Transform( 1, 1.19027e-05, -6.83138e-06, 1.70433e-06, 0.38739, 0.921918, 1.36235e-05, -0.921924, 0.387387, -0.000488281, -9.47633, 51.6072 )
+mesh = SubResource( 20 )
+material/0 = ExtResource( 5 )
+
+[node name="Lswc4" type="MeshInstance" parent="Base/jack_cylinder2/hinge/handle/steering_wheel/Lsteering_wheel_cover/Lswc1/Lswc2/Lswc3"]
+transform = Transform( 1, -7.17847e-06, -7.75237e-06, -9.50634e-06, -0.291336, -0.956613, 4.621e-06, 0.956626, -0.291337, -0.000930786, -39.2196, -4.43121 )
+redirect_selection = true
+mesh = SubResource( 21 )
+material/0 = ExtResource( 5 )
+
+[node name="Lswc5" type="MeshInstance" parent="Base/jack_cylinder2/hinge/handle/steering_wheel/Lsteering_wheel_cover/Lswc1/Lswc2/Lswc3/Lswc4"]
+transform = Transform( 1, 5.82077e-11, 3.63798e-11, -4.36557e-11, 0.338725, 0.940885, 1.45519e-11, -0.940895, 0.338721, 0.000450134, -18.0712, 64.3387 )
+mesh = SubResource( 22 )
+material/0 = null
+
+[node name="Lswc6" type="MeshInstance" parent="Base/jack_cylinder2/hinge/handle/steering_wheel/Lsteering_wheel_cover/Lswc1/Lswc2/Lswc3/Lswc4/Lswc5"]
+transform = Transform( 1, 3.73794e-06, -2.27359e-07, 1.65445e-06, -0.496217, -0.868187, -3.36109e-06, 0.8682, -0.496209, 5.34058e-05, -72.2399, -13.4445 )
+redirect_selection = true
+mesh = SubResource( 23 )
+material/0 = ExtResource( 5 )
+
+[node name="Rsteering_wheel_cover" type="MeshInstance" parent="Base/jack_cylinder2/hinge/handle/steering_wheel"]
+transform = Transform( -0.999999, 3.25841e-07, 0, -3.25841e-07, -0.999999, -8.52651e-14, 0, 0, 0.999998, 0, -150.607, -0.00744629 )
+redirect_selection = true
+mesh = SubResource( 17 )
+material/0 = ExtResource( 5 )
+
+[node name="Lswc1" type="MeshInstance" parent="Base/jack_cylinder2/hinge/handle/steering_wheel/Rsteering_wheel_cover"]
+transform = Transform( 1, 1.29339e-08, 3.63184e-09, -1.85286e-08, 0.858132, -0.513438, -1.23257e-08, 0.513438, 0.858128, 0.0868301, 24.9481, 14.8936 )
+mesh = SubResource( 18 )
+material/0 = null
+
+[node name="Lswc2" type="MeshInstance" parent="Base/jack_cylinder2/hinge/handle/steering_wheel/Rsteering_wheel_cover/Lswc1"]
+transform = Transform( 1, -0.000171653, 2.8204e-05, 0.000133102, 0.859739, 0.510726, -0.000112134, -0.510725, 0.859741, 0, 42.5691, 24.8229 )
+redirect_selection = true
+mesh = SubResource( 19 )
+material/0 = ExtResource( 5 )
+
+[node name="Lswc3" type="MeshInstance" parent="Base/jack_cylinder2/hinge/handle/steering_wheel/Rsteering_wheel_cover/Lswc1/Lswc2"]
+transform = Transform( 1, 1.19027e-05, -6.83138e-06, 1.70433e-06, 0.38739, 0.921918, 1.36235e-05, -0.921924, 0.387387, -0.000488281, -9.47633, 51.6072 )
+mesh = SubResource( 20 )
+material/0 = ExtResource( 5 )
+
+[node name="Lswc4" type="MeshInstance" parent="Base/jack_cylinder2/hinge/handle/steering_wheel/Rsteering_wheel_cover/Lswc1/Lswc2/Lswc3"]
+transform = Transform( 1, -7.17847e-06, -7.75237e-06, -9.50634e-06, -0.291336, -0.956613, 4.621e-06, 0.956626, -0.291337, -0.000930786, -39.2196, -4.43121 )
+redirect_selection = true
+mesh = SubResource( 21 )
+material/0 = ExtResource( 5 )
+
+[node name="Lswc5" type="MeshInstance" parent="Base/jack_cylinder2/hinge/handle/steering_wheel/Rsteering_wheel_cover/Lswc1/Lswc2/Lswc3/Lswc4"]
+transform = Transform( 1, 5.82077e-11, 3.63798e-11, -4.36557e-11, 0.338725, 0.940885, 1.45519e-11, -0.940895, 0.338721, 0.000450134, -18.0712, 64.3387 )
+mesh = SubResource( 22 )
+material/0 = null
+
+[node name="Lswc6" type="MeshInstance" parent="Base/jack_cylinder2/hinge/handle/steering_wheel/Rsteering_wheel_cover/Lswc1/Lswc2/Lswc3/Lswc4/Lswc5"]
+transform = Transform( 1, 3.73794e-06, -2.27359e-07, 1.65445e-06, -0.496217, -0.868187, -3.36109e-06, 0.8682, -0.496209, 5.34058e-05, -72.2399, -13.4445 )
+redirect_selection = true
+mesh = SubResource( 23 )
+material/0 = ExtResource( 5 )
+
+[node name="control_lever" type="MeshInstance" parent="Base/jack_cylinder2/hinge/handle"]
+transform = Transform( 1, 0, 0, 0, 0.241651, 0.970363, 0, -0.970363, 0.241651, -0.236828, 418.419, 47.5955 )
+mesh = SubResource( 24 )
+material/0 = null
+
+[node name="cl1" type="MeshInstance" parent="Base/jack_cylinder2/hinge/handle/control_lever"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -35.2545, 0.0192871 )
+mesh = SubResource( 25 )
+material/0 = null
+
+[node name="cl2" type="MeshInstance" parent="Base/jack_cylinder2/hinge/handle/control_lever/cl1"]
+transform = Transform( 1, 0, 0, 0, 0.840493, -0.541827, 0, 0.541827, 0.840492, 0, -6.53781, -4.19397 )
+mesh = SubResource( 26 )
+material/0 = ExtResource( 4 )
+
+[node name="sphere1" type="MeshInstance" parent="Base/jack_cylinder2/hinge/handle/control_lever/cl1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0297775, 52.0648, -1.48254 )
+mesh = SubResource( 27 )
+material/0 = null
+
+[node name="sphere2" type="MeshInstance" parent="Base/jack_cylinder2/hinge/handle/control_lever/cl1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 26.4415, -1.21973 )
+mesh = SubResource( 27 )
+material/0 = null
+
+[node name="sphere3" type="MeshInstance" parent="Base/jack_cylinder2/hinge/handle/control_lever/cl1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000938416, 38.6776, -1.44751 )
+mesh = SubResource( 27 )
+material/0 = null
+
+[node name="sphere4" type="MeshInstance" parent="Base/jack_cylinder2/hinge/handle/control_lever/cl1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0549011, 13.9709, -1.03979 )
+mesh = SubResource( 27 )
+material/0 = null
+
+[node name="hingecl" type="MeshInstance" parent="Base/jack_cylinder2/hinge/handle/control_lever"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 34.3178, -1.20642 )
+mesh = SubResource( 28 )
+material/0 = null
+
+[node name="base_stop" type="MeshInstance" parent="Base"]
+transform = Transform( 0.961756, -0.273916, 0.00112008, 0.273918, 0.961755, -0.00202775, -0.000521772, 0.002257, 0.999999, -192.228, -182.639, 2.57484 )
+mesh = SubResource( 29 )
+material/0 = ExtResource( 3 )
+
+[node name="Lwheel" type="MeshInstance" parent="Base"]
+transform = Transform( 1, 0, -8.90941e-09, -8.33097e-10, -1.62981e-07, -1, 1.76951e-08, 1, -1.64611e-07, -267.384, -182.991, 173.573 )
+mesh = SubResource( 30 )
+material/0 = ExtResource( 4 )
+
+[node name="Rwheel" type="MeshInstance" parent="Base"]
+transform = Transform( 1, -1.86265e-09, -1.06756e-08, -8.60382e-10, -1.62981e-07, -1, 2.14204e-08, 1, -1.64611e-07, -270.105, -184.033, -170.442 )
+mesh = SubResource( 30 )
+material/0 = ExtResource( 4 )
+
+[node name="Lstiffener" type="MeshInstance" parent="Base"]
+transform = Transform( 0.108512, -0.338438, 0.934721, 0.15821, 0.934168, 0.319872, -0.981436, 0.113171, 0.15491, -56.349, -28.0823, 173.495 )
+mesh = SubResource( 31 )
+material/0 = null
+
+[node name="Rstiffener" type="MeshInstance" parent="Base"]
+transform = Transform( 0.124368, -0.287018, 0.949829, -0.080171, 0.951223, 0.297938, -0.989004, -0.113201, 0.0952896, -61.8987, -21.9798, -172.096 )
+mesh = SubResource( 31 )
+material/0 = null
+
+[node name="Rfork_slope_end" type="MeshInstance" parent="Base"]
+transform = Transform( 1, -2.58697e-08, 7.45058e-09, 1.20835e-08, 1.00001, -5.12227e-09, -2.23517e-08, 1.39698e-09, 1, 1999.9, -153.182, -202.574 )
+mesh = SubResource( 32 )
+material/0 = ExtResource( 6 )
+
+[node name="Rfork_slope2" type="MeshInstance" parent="Base/Rfork_slope_end"]
+transform = Transform( 1, 1.98997e-09, -9.31323e-10, -2.7776e-09, 1, -2.32831e-10, 9.31323e-10, -6.98492e-10, 1, -1.4762, -35.071, -0.304642 )
+mesh = SubResource( 33 )
+material/0 = ExtResource( 8 )
+
+[node name="Rwheel1" type="MeshInstance" parent="Base/Rfork_slope_end"]
+transform = Transform( 1, -4.65661e-09, -4.20187e-09, -7.55608e-09, -1.62283e-07, -1, -5.58794e-09, 1, -1.61352e-07, -265.532, -33.2763, -3.96069 )
+mesh = SubResource( 34 )
+material/0 = ExtResource( 4 )
+
+[node name="Rwheel2" type="MeshInstance" parent="Base/Rfork_slope_end"]
+transform = Transform( -0.0543327, 0.00782119, 0.998495, 0.998517, 0.0029969, 0.0543107, -0.0025676, 0.999964, -0.00797237, -144.883, -33.8193, -2.81471 )
+mesh = SubResource( 34 )
+material/0 = ExtResource( 4 )
+
+[node name="Lfork_slope_end" type="MeshInstance" parent="Base"]
+transform = Transform( 1, -1.38134e-08, 1.86264e-08, 1.30912e-08, 1, 6.98483e-10, 1.76951e-08, -9.3132e-10, 0.999999, 1999.9, -152.997, 193.735 )
+mesh = SubResource( 32 )
+material/0 = ExtResource( 6 )
+
+[node name="Lfork_slope2" type="MeshInstance" parent="Base/Lfork_slope_end"]
+transform = Transform( 1, 9.05526e-16, -1.77636e-15, -1.23597e-17, 1, 5.55112e-17, -1.77636e-15, 5.55112e-17, 1, -1.47607, -35.071, -0.304611 )
+mesh = SubResource( 33 )
+material/0 = ExtResource( 8 )
+
+[node name="Lwheel1" type="MeshInstance" parent="Base/Lfork_slope_end"]
+transform = Transform( 1, -1.77636e-15, -3.32876e-10, -4.65839e-09, -1.62051e-07, -1, -3.7253e-09, 1, -1.62051e-07, -146.734, -32.4952, -4.63188 )
+mesh = SubResource( 34 )
+material/0 = ExtResource( 4 )
+
+[node name="Lwheel2" type="MeshInstance" parent="Base/Lfork_slope_end"]
+transform = Transform( 1, -3.55271e-15, 6.40285e-10, -2.8012e-09, -1.61584e-07, -1, -3.7253e-09, 1, -1.61119e-07, -267.336, -33.6658, -3.62593 )
+mesh = SubResource( 34 )
+material/0 = ExtResource( 4 )
+
+[node name="Base_hide" type="MeshInstance" parent="Base"]
+transform = Transform( 0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 1, -15.112, -178.53, 0 )
+mesh = SubResource( 35 )
+material/0 = ExtResource( 8 )
+
+[node name="jack" type="MeshInstance" parent="Base"]
+transform = Transform( -1.6292e-07, -0.999998, 0, -1.6292e-07, 2.65431e-14, -0.999998, 1, -1.62921e-07, -1.62921e-07, -185.514, -18.6473, -1.11728 )
+mesh = SubResource( 36 )
+material/0 = ExtResource( 3 )

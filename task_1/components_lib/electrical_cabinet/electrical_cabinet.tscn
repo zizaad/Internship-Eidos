@@ -1,0 +1,84 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://components_lib/electrical_cabinet/meshes/lightning/lightning4.tres" type="CubeMesh" id=1]
+[ext_resource path="res://components_lib/electrical_cabinet/meshes/lightning/lightning0.tres" type="PrismMesh" id=3]
+[ext_resource path="res://components_lib/electrical_cabinet/meshes/lightning/lightning2.tres" type="CubeMesh" id=6]
+[ext_resource path="res://components_lib/electrical_cabinet/meshes/lightning/lightning1.tres" type="PrismMesh" id=7]
+[ext_resource path="res://components_lib/electrical_cabinet/script/electrical cabinet.gd" type="Script" id=8]
+[ext_resource path="res://components_lib/electrical_cabinet/meshes/lightning/lightning3.tres" type="CubeMesh" id=9]
+[ext_resource path="res://components_lib/electrical_cabinet/materials/cabinet.tres" type="Material" id=10]
+[ext_resource path="res://components_lib/electrical_cabinet/materials/lock.tres" type="Material" id=11]
+[ext_resource path="res://components_lib/electrical_cabinet/materials/lightning/black_lightning.material" type="Material" id=12]
+[ext_resource path="res://components_lib/electrical_cabinet/materials/lightning/yellow_lighning.material" type="Material" id=13]
+
+[sub_resource type="CubeMesh" id=1]
+size = Vector3( 15, 342, 242 )
+
+[sub_resource type="CylinderMesh" id=2]
+top_radius = 10.0
+bottom_radius = 15.0
+height = 5.0
+
+[sub_resource type="CubeMesh" id=3]
+size = Vector3( 130, 382, 282 )
+
+[node name="electrical_cabinet" type="Spatial"]
+script = ExtResource( 8 )
+
+[node name="door_cupboard_joint" type="RcsToggleJoint" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2 )
+rotation_axis = Vector3( 0, 1, 0 )
+translation_axis = Vector3( -15, 0, 0 )
+base_translation = Vector3( 0, 0, 2 )
+ToggleEnabled = true
+TogglePositive = false
+MaxBorder = 0.87
+MinBorder = 0.0
+Throttle = 1000.0
+
+[node name="door" type="MeshInstance" parent="door_cupboard_joint"]
+transform = Transform( 1, 0, 0, 0, 1.05848, 0, 0, 0, 1.08264, -7, 191, 141 )
+redirect_selection = true
+mesh = SubResource( 1 )
+material/0 = ExtResource( 10 )
+
+[node name="lock" type="MeshInstance" parent="door_cupboard_joint"]
+transform = Transform( 1.6292e-07, 1.00561, -3.29156e-07, 0.999998, -1.63835e-07, 0, -5.30862e-14, -3.2767e-07, -1.01017, 2, 191, 242 )
+redirect_selection = true
+mesh = SubResource( 2 )
+material/0 = ExtResource( 11 )
+
+[node name="lightning0" type="MeshInstance" parent="door_cupboard_joint"]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 1, 231, 141 )
+redirect_selection = true
+mesh = ExtResource( 3 )
+material/0 = ExtResource( 13 )
+
+[node name="lightning1" type="MeshInstance" parent="door_cupboard_joint/lightning0"]
+transform = Transform( -0.944244, -0.329245, 0, 0.329245, -0.944244, -1.74937e-15, 0, 0, 1, 0, -17, 0.5 )
+redirect_selection = true
+mesh = ExtResource( 7 )
+material/0 = ExtResource( 12 )
+
+[node name="lightning2" type="MeshInstance" parent="door_cupboard_joint/lightning0"]
+transform = Transform( 0.34202, -0.939692, -1.42109e-14, 0.939693, 0.34202, 0, 0, 0, 1, 2, -12, 0 )
+redirect_selection = true
+mesh = ExtResource( 6 )
+material/0 = ExtResource( 12 )
+
+[node name="lightning3" type="MeshInstance" parent="door_cupboard_joint/lightning0"]
+transform = Transform( 1, 0, -4.26326e-14, 0, 1, 0, 4.26326e-14, 0, 1, 1.35612, -7.66289, -5.96046e-08 )
+redirect_selection = true
+mesh = ExtResource( 9 )
+material/0 = ExtResource( 12 )
+
+[node name="lightning4" type="MeshInstance" parent="door_cupboard_joint/lightning0"]
+transform = Transform( 0.356346, -0.934353, -2.84217e-14, 0.934354, 0.356347, 0, 3.55271e-15, -1.42109e-14, 1, 0.074585, -1.54156, 0 )
+redirect_selection = true
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 12 )
+
+[node name="cabinet" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -65, 191, 141 )
+mesh = SubResource( 3 )
+material/0 = ExtResource( 10 )

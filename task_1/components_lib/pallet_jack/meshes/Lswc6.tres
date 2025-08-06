@@ -1,0 +1,5 @@
+[gd_resource type="CapsuleMesh" format=2]
+
+[resource]
+radius = 15.0
+mid_height = 55.0

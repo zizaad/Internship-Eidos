@@ -1,0 +1,9 @@
+[gd_resource type="PrismMesh" load_steps=2 format=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 1, 0.984314, 0, 1 )
+metallic = 0.51
+
+[resource]
+material = SubResource( 1 )
+size = Vector3( 5, 5, 0 )

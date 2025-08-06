@@ -1,0 +1,8 @@
+[gd_resource type="SphereMesh" load_steps=2 format=2]
+
+[ext_resource path="res://materials/grey2.tres" type="Material" id=1]
+
+[resource]
+material = ExtResource( 1 )
+radius = 45.0
+height = 100.0

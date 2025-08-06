@@ -1,0 +1,11 @@
+[gd_resource type="SpatialMaterial" format=2]
+
+[resource]
+params_point_size = 0.1
+albedo_color = Color( 0.0823529, 0.709804, 0.866667, 0.92549 )
+metallic = 0.38
+metallic_specular = 0.33
+roughness = 0.2
+refraction_enabled = true
+refraction_scale = -0.21
+refraction_texture_channel = 0

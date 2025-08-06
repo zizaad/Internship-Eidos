@@ -1,0 +1,225 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://components_lib/v_positioner/scripts/plan.gd" type="Script" id=1]
+[ext_resource path="res://components_lib/v_positioner/scenes/panel.tscn" type="PackedScene" id=3]
+[ext_resource path="res://components_lib/v_positioner/scenes/faceplate.tscn" type="PackedScene" id=4]
+[ext_resource path="res://components_lib/v_positioner/scenes/vent.tscn" type="PackedScene" id=5]
+[ext_resource path="res://components_lib/v_positioner/materials/main.material" type="Material" id=6]
+
+[sub_resource type="CylinderMesh" id=1]
+resource_local_to_scene = true
+material = ExtResource( 6 )
+height = 1.0
+radial_segments = 20
+
+[sub_resource type="CubeMesh" id=2]
+size = Vector3( 1, 1, 1 )
+
+[sub_resource type="CubeMesh" id=17]
+material = ExtResource( 6 )
+size = Vector3( 1, 1, 1 )
+
+[sub_resource type="CylinderMesh" id=4]
+height = 1.0
+
+[sub_resource type="PrismMesh" id=5]
+left_to_right = 0.0
+size = Vector3( 1, 1, 1 )
+
+[sub_resource type="PrismMesh" id=6]
+left_to_right = 0.0
+size = Vector3( 1, 1, 1 )
+
+[sub_resource type="PrismMesh" id=7]
+left_to_right = 1.0
+size = Vector3( 1, 1, 1 )
+
+[sub_resource type="PrismMesh" id=8]
+material = ExtResource( 6 )
+left_to_right = 1.0
+size = Vector3( 1, 1, 1 )
+
+[sub_resource type="PrismMesh" id=9]
+left_to_right = 0.0
+size = Vector3( 1, 1, 1 )
+
+[sub_resource type="PrismMesh" id=10]
+left_to_right = 0.0
+size = Vector3( 1, 1, 1 )
+
+[sub_resource type="PrismMesh" id=11]
+left_to_right = 1.0
+size = Vector3( 1, 1, 1 )
+
+[sub_resource type="PrismMesh" id=12]
+left_to_right = 1.0
+size = Vector3( 1, 1, 1 )
+
+[sub_resource type="PrismMesh" id=13]
+left_to_right = 0.0
+size = Vector3( 1, 1, 1 )
+
+[sub_resource type="PrismMesh" id=14]
+left_to_right = 1.0
+size = Vector3( 1, 1, 1 )
+
+[sub_resource type="PrismMesh" id=15]
+left_to_right = 1.0
+size = Vector3( 1, 1, 1 )
+
+[sub_resource type="PrismMesh" id=16]
+left_to_right = 0.0
+size = Vector3( 1, 1, 1 )
+
+[node name="v_positioner" type="RcsPositioner"]
+joints_count = 1
+joints_data/joint_1_/joint_path = NodePath("Spatial/RcsJoint")
+joints_data/joint_1_/home_position = 0.0
+joints_data/joint_1_/is_linear = false
+joints_data/joint_1_/reduction_rate = 100.0
+joints_data/joint_1_/speed_rpm = 3000.0
+joints_data/joint_1_/steps_per_revolution = 2000
+joints_data/joint_1_/joint_min_deg_or_mm = -360.0
+joints_data/joint_1_/joint_max_deg_or_mm = 360.0
+joints_data/joint_1_/allow_deustation = false
+joints_data/joint_1_/ignore_z_mark = false
+joints_data/joint_1_/acceleration_time_ms = 400.0
+script = ExtResource( 1 )
+
+[node name="Spatial" type="Spatial" parent="."]
+transform = Transform( 1, 2.6077e-08, -1.19209e-07, -1.86265e-08, 1, -1.67638e-08, -5.96046e-08, 2.79397e-08, 1, 0, 0, 0 )
+
+[node name="panel" parent="Spatial" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 174, 55, 0 )
+
+[node name="grille" parent="Spatial" instance=ExtResource( 5 )]
+transform = Transform( -1.62921e-07, 0, -5, 0, 1, 0, 1, 0, -8.14603e-07, -152, 65, 0 )
+
+[node name="cylinder" type="Spatial" parent="Spatial"]
+
+[node name="cylinder" type="MeshInstance" parent="Spatial/cylinder"]
+transform = Transform( 175, -2.72004e-13, 0, 1.36002e-13, 350, 0, 0, 0, 175, 0, 180, 0 )
+visible = false
+mesh = SubResource( 1 )
+material/0 = ExtResource( 6 )
+
+[node name="support" type="Spatial" parent="Spatial"]
+
+[node name="support" type="MeshInstance" parent="Spatial/support"]
+transform = Transform( 500, 0, 0, 0, 5, 0, 0, 0, 500, 0, 3, 0 )
+mesh = SubResource( 2 )
+material/0 = ExtResource( 6 )
+
+[node name="Pedestal" type="Spatial" parent="Spatial"]
+
+[node name="pedestal" type="MeshInstance" parent="Spatial/Pedestal"]
+transform = Transform( 350, -2.60771e-06, -2.08616e-05, 2.60771e-06, 350, 1.30385e-06, 2.08616e-05, -1.30385e-06, 350, 0, 180, 0 )
+mesh = SubResource( 17 )
+material/0 = ExtResource( 6 )
+
+[node name="RcsJoint" type="RcsJoint" parent="Spatial"]
+rotation_axis = Vector3( 0, 1, 0 )
+
+[node name="Supportcubus" type="Spatial" parent="Spatial/RcsJoint"]
+redirect_selection = true
+
+[node name="supportcubus" type="MeshInstance" parent="Spatial/RcsJoint/Supportcubus"]
+transform = Transform( 31, 0, 0, 0, 350, 0, 0, 0, 31, 0, 184, 0 )
+redirect_selection = true
+mesh = SubResource( 4 )
+material/0 = ExtResource( 6 )
+
+[node name="faceplate" parent="Spatial/RcsJoint" instance=ExtResource( 4 )]
+transform = Transform( 2.8, 0, 0, 0, 5, 0, 0, 0, 2.8, 0, 364.333, 0 )
+redirect_selection = true
+
+[node name="AttachmentBase" type="AttachmentBase" parent="Spatial/RcsJoint/faceplate"]
+redirect_selection = true
+
+[node name="gusset" type="Spatial" parent="Spatial"]
+
+[node name="xkos1" type="Spatial" parent="Spatial/gusset"]
+
+[node name="MeshInstance" type="MeshInstance" parent="Spatial/gusset/xkos1"]
+transform = Transform( 60, 0, 0, 0, 350, 0, 0, 0, 10, 195, 180, 116.667 )
+mesh = SubResource( 5 )
+material/0 = ExtResource( 6 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="Spatial/gusset/xkos1"]
+transform = Transform( 60, 0, 0, 0, 350, 0, 0, 0, 10, 195, 180, -116.667 )
+mesh = SubResource( 6 )
+material/0 = ExtResource( 6 )
+
+[node name="xkos2" type="Spatial" parent="Spatial/gusset"]
+
+[node name="MeshInstance" type="MeshInstance" parent="Spatial/gusset/xkos2"]
+transform = Transform( 60, 0, 0, 0, 350, 0, 0, 0, 10, -195, 180, 116.667 )
+mesh = SubResource( 7 )
+material/0 = ExtResource( 6 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="Spatial/gusset/xkos2"]
+transform = Transform( 60, 0, 0, 0, 350, 0, 0, 0, 10, -195, 180, -116.667 )
+mesh = SubResource( 8 )
+material/0 = ExtResource( 6 )
+
+[node name="zkos1" type="Spatial" parent="Spatial/gusset"]
+
+[node name="MeshInstance" type="MeshInstance" parent="Spatial/gusset/zkos1"]
+transform = Transform( -9.77524e-06, 0, -10, 0, 350, 0, 60, 0, -1.62921e-06, -116.667, 180, 195 )
+mesh = SubResource( 9 )
+material/0 = ExtResource( 6 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="Spatial/gusset/zkos1"]
+transform = Transform( -9.77524e-06, 0, -10, 0, 350, 0, 60, 0, -1.62921e-06, 116.667, 180, 195 )
+mesh = SubResource( 10 )
+material/0 = ExtResource( 6 )
+
+[node name="zkos2" type="Spatial" parent="Spatial/gusset"]
+
+[node name="MeshInstance" type="MeshInstance" parent="Spatial/gusset/zkos2"]
+transform = Transform( -1.69278e-05, 3.78735e-12, -10, 2.23517e-07, 350, 9.76998e-14, 60, -1.30385e-06, -2.8213e-06, 116.667, 180, -195 )
+mesh = SubResource( 11 )
+material/0 = ExtResource( 6 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="Spatial/gusset/zkos2"]
+transform = Transform( -9.77524e-06, 0, -10, 0, 350, 0, 60, 0, -1.62921e-06, -116.667, 180, -195 )
+mesh = SubResource( 12 )
+material/0 = ExtResource( 6 )
+
+[node name="cylgusset" type="Spatial" parent="Spatial"]
+
+[node name="MeshInstance" type="MeshInstance" parent="Spatial/cylgusset"]
+transform = Transform( -42.4264, 0, 4.94975, 0, 350, 0, -42.4264, 0, -4.94975, -134.219, 180, -134.219 )
+visible = false
+mesh = SubResource( 13 )
+material/0 = ExtResource( 6 )
+
+[node name="MeshInstance5" type="MeshInstance" parent="Spatial/cylgusset"]
+transform = Transform( 42.4264, 0, 4.94975, 0, 350, 0, -42.4264, 0, 4.94975, 134.219, 180, -134.219 )
+visible = false
+mesh = SubResource( 13 )
+material/0 = ExtResource( 6 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="Spatial/cylgusset"]
+transform = Transform( 42.4264, 0, 4.94975, 0, 350, 0, -42.4264, 0, 4.94975, -134.219, 180, 134.219 )
+visible = false
+mesh = SubResource( 14 )
+material/0 = ExtResource( 6 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="Spatial/cylgusset"]
+transform = Transform( -9.77524e-06, 0, 7, 0, 350, 0, -60, 0, -1.14044e-06, 0, 180, 189.583 )
+visible = false
+mesh = SubResource( 15 )
+material/0 = ExtResource( 6 )
+
+[node name="MeshInstance4" type="MeshInstance" parent="Spatial/cylgusset"]
+transform = Transform( -9.77524e-06, 0, 7, 0, 350, 0, -60, 0, -1.14044e-06, 0, 180, -189.583 )
+visible = false
+mesh = SubResource( 16 )
+material/0 = ExtResource( 6 )
+
+[node name="MeshInstance6" type="MeshInstance" parent="Spatial/cylgusset"]
+transform = Transform( -42.4264, 0, 4.94975, 0, 350, 0, -42.4264, 0, -4.94975, 134.219, 180, 134.219 )
+visible = false
+mesh = SubResource( 14 )
+material/0 = ExtResource( 6 )
