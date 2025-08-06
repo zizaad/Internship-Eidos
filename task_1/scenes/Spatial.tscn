@@ -6,13 +6,14 @@
 [ext_resource path="res://components_lib/operator/operator.tscn" type="PackedScene" id=4]
 [ext_resource path="res://components_lib/parametric_conveyor/parametric_conveyor.tscn" type="PackedScene" id=5]
 [ext_resource path="res://components_lib/pallet/pallet.tscn" type="PackedScene" id=6]
-[ext_resource path="res://components_lib/electrical_cabinet/electrical_cabinet.tscn" type="PackedScene" id=7]
+[ext_resource path="res://components_lib/fence/fence.tscn" type="PackedScene" id=7]
 [ext_resource path="res://components_lib/pallet_jack/pallet_jack.tscn" type="PackedScene" id=8]
 [ext_resource path="res://components_lib/a220_2700/a220_2700.tscn" type="PackedScene" id=9]
 
 [node name="Spatial" type="Spatial"]
 
 [node name="v_positioner" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 627.932 )
 pedestal_width = 350
 pedestal_height = 350
 faceplate_width = 10
@@ -39,57 +40,110 @@ board = "On the left and right"
 engine = "On the left and right"
 height_Collision_conveyor_MM = 20
 
+[node name="conveyor2" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.999975, 0, -0.00701612, 0, 1, 0, 0.00701612, 0, 0.999975, 1026.26, 1.40995, 775.123 )
+height_conveyor_MM = 527.9
+length_conveyor_MM = 2522.7
+board = "None"
+engine = "On the left and right"
+height_Collision_conveyor_MM = 20
+
+[node name="conveyor3" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.999975, 0, -0.00701612, 0, 1, 0, 0.00701612, 0, 0.999975, 1026.26, 1.40995, -1108.77 )
+height_conveyor_MM = 527.9
+length_conveyor_MM = 2522.7
+board = "None"
+engine = "On the left and right"
+height_Collision_conveyor_MM = 20
+
 [node name="pallet_jack" parent="." instance=ExtResource( 8 )]
 transform = Transform( -0.00151853, 0, -0.999999, 0, 1, 0, 0.999999, 0, -0.00151853, 46.8895, 0, -2848.47 )
 scale_of_fork = 1612.5
 
 [node name="pallet_jack2" parent="." instance=ExtResource( 8 )]
-transform = Transform( -0.999998, 0, -0.00219901, 0, 1, 0, 0.00219901, 0, -0.999998, 4618.83, 0, 41.4878 )
+transform = Transform( -0.999998, 0, -0.00219901, 0, 1, 0, 0.00219901, 0, -0.999998, 5561.85, 0, 852.178 )
 scale_of_fork = 1612.5
 
 [node name="pallet_jack3" parent="." instance=ExtResource( 8 )]
-transform = Transform( -0.999998, 0, -0.00219901, 0, 1, 0, 0.00219901, 0, -0.999998, 3294.74, 0, -1682.02 )
+transform = Transform( -0.999998, 0, -0.00219901, 0, 1, 0, 0.00219901, 0, -0.999998, 5491.56, 0, -1122.68 )
 scale_of_fork = 1612.5
 
 [node name="pallet_jack4" parent="." instance=ExtResource( 8 )]
-transform = Transform( -0.999998, 0, -0.00219901, 0, 1, 0, 0.00219901, 0, -0.999998, 3294.74, 0, 1503.82 )
+transform = Transform( -0.999998, 0, -0.00219901, 0, 1, 0, 0.00219901, 0, -0.999998, 3677.03, 0, 2287.64 )
 scale_of_fork = 1612.5
 
 [node name="pallet" parent="." instance=ExtResource( 6 )]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 1490.98, 98.863, -1162.52 )
-high_of_pallet_mm = 250.0
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 3687.8, 98.863, -736.061 )
+high_of_pallet_mm = 150.0
 width_of_pallet_mm = 1200.0
-depth_of_pallet_mm = 1000.0
+depth_of_pallet_mm = 800.0
 
 [node name="pallet2" parent="." instance=ExtResource( 6 )]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 1490.98, 98.863, 1991.95 )
-high_of_pallet_mm = 250.0
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 1873.27, 98.863, 2712.39 )
+high_of_pallet_mm = 150.0
 width_of_pallet_mm = 1200.0
-depth_of_pallet_mm = 1000.0
+depth_of_pallet_mm = 800.0
 
 [node name="pallet3" parent="." instance=ExtResource( 6 )]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 2873.57, 98.863, 536.45 )
-high_of_pallet_mm = 250.0
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 3753.95, 98.863, 1235.24 )
+high_of_pallet_mm = 150.0
 width_of_pallet_mm = 1200.0
-depth_of_pallet_mm = 1000.0
+depth_of_pallet_mm = 800.0
 
 [node name="pallet4" parent="." instance=ExtResource( 6 )]
-transform = Transform( 0.999866, 0, -0.0163878, 0, 1, 0, 0.0163878, 0, 0.999866, -438.801, 98.863, -2249.76 )
-high_of_pallet_mm = 250.0
+transform = Transform( -0.00179759, 0, -0.999999, 0, 1, 0, 0.999999, 0, -0.00179759, 723.236, 98.863, -2032.86 )
+high_of_pallet_mm = 150.0
 width_of_pallet_mm = 1200.0
-depth_of_pallet_mm = 1000.0
+depth_of_pallet_mm = 800.0
 
 [node name="a12_control_cabinet" parent="." instance=ExtResource( 3 )]
-transform = Transform( -0.00532338, 0, -0.999986, 0, 1, 0, 0.999986, 0, -0.00532338, -2099.38, 0, 851.705 )
+transform = Transform( -0.00532338, 0, -0.999986, 0, 1, 0, 0.999986, 0, -0.00532338, -2230.05, 0, 611.884 )
 opened = false
 
-[node name="electrical_cabinet" parent="." instance=ExtResource( 7 )]
-transform = Transform( -0.999688, 0, 0.0249729, 0, 1, 0, -0.0249729, 0, -0.999688, -1828.7, 0, 2358.8 )
-height_mm = 382.0
-width_mm = 282.0
-depth_mm = 130.0
+[node name="a12_control_cabinet2" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.999997, 0, 0.00240865, 0, 1, 0, -0.00240865, 0, -0.999997, -655.573, 0, 2009.3 )
 opened = false
 
 [node name="Wally_operatorM" parent="." instance=ExtResource( 4 )]
 transform = Transform( -0.0531726, 0, -0.998585, 0, 1, 0, 0.998585, 0, -0.0531726, -3129.97, 0, 573.229 )
 sit = false
+
+[node name="fence_section_generator" parent="." instance=ExtResource( 7 )]
+transform = Transform( -0.00462523, 0, -0.999989, 0, 1, 0, 0.999989, 0, -0.00462523, 3048, 0, 2878.05 )
+section_width = 1516
+section_height = 2060
+floor_gap = 85
+fence_length = 4550
+number_of_sections = 3
+width_edit_mode = 0
+standard_section_width = 1500
+
+[node name="fence_section_generator3" parent="." instance=ExtResource( 7 )]
+transform = Transform( -0.00462523, 0, -0.999989, 0, 1, 0, 0.999989, 0, -0.00462523, 3519.08, 0, -114.75 )
+section_width = 1700
+section_height = 2060
+floor_gap = 85
+fence_length = 1700
+number_of_sections = 1
+width_edit_mode = 0
+standard_section_width = 1500
+
+[node name="fence_section_generator4" parent="." instance=ExtResource( 7 )]
+transform = Transform( -0.00462523, 0, -0.999989, 0, 1, 0, 0.999989, 0, -0.00462523, 3519.08, 0, -2166.78 )
+section_width = 1250
+section_height = 2060
+floor_gap = 85
+fence_length = 2500
+number_of_sections = 2
+width_edit_mode = 0
+standard_section_width = 1500
+
+[node name="fence_section_generator2" parent="." instance=ExtResource( 7 )]
+transform = Transform( -0.999978, 0, -0.00666688, 0, 1, 0, 0.00666688, 0, -0.999978, -1502.08, 0, 2852.46 )
+section_width = 1150
+section_height = 2060
+floor_gap = 85
+fence_length = 2300
+number_of_sections = 2
+width_edit_mode = 0
+standard_section_width = 1500

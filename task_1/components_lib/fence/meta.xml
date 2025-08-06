@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component_meta>
+<name>fence</name>
+<developer>eidos</developer>
+<version>1</version>
+<description>Fence model. The user can adjust the height and width of the section, gap beetwen floor and lower crossbar, number of sections and full length of fence.
+There are two ways to adjust width of section, number of sections and length of fence: "Base Section Width" and "Editable section width".
+After selection of "Base Section Width" user can set standard width of section and after that width of section and number of sections will be calculated automatically, depending on fence length. Width of section will be calculated in small range around standard width. Using this method user can't edit parameter "Section Width".
+After selection of "Editable Section Width" user can manually edit section width, length of fence and number of sections.</description>
+</component_meta>

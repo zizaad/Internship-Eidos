@@ -1,0 +1,232 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://components_lib/fence/materials/yellow.tres" type="Material" id=1]
+[ext_resource path="res://components_lib/fence/materials/black.tres" type="Material" id=2]
+[ext_resource path="res://components_lib/fence/scripts/fence_section.gd" type="Script" id=4]
+[ext_resource path="res://components_lib/fence/materials/grid.tres" type="Material" id=5]
+
+[sub_resource type="PlaneMesh" id=1]
+material = ExtResource( 5 )
+size = Vector2( 1900, 1250 )
+
+[sub_resource type="CubeMesh" id=2]
+material = ExtResource( 1 )
+size = Vector3( 60, 2000, 60 )
+
+[sub_resource type="CubeMesh" id=3]
+material = ExtResource( 2 )
+size = Vector3( 60, 25, 60 )
+
+[sub_resource type="CubeMesh" id=4]
+material = ExtResource( 2 )
+size = Vector3( 70, 5, 70 )
+
+[sub_resource type="CubeMesh" id=5]
+material = ExtResource( 2 )
+size = Vector3( 90, 30, 80 )
+
+[sub_resource type="CubeMesh" id=6]
+material = ExtResource( 2 )
+size = Vector3( 30, 1950, 30 )
+
+[sub_resource type="CubeMesh" id=7]
+material = ExtResource( 2 )
+size = Vector3( 5, 30, 1300 )
+
+[sub_resource type="CubeMesh" id=8]
+material = ExtResource( 2 )
+size = Vector3( 30, 30, 1300 )
+
+[sub_resource type="CylinderMesh" id=9]
+material = ExtResource( 1 )
+top_radius = 7.5
+bottom_radius = 7.5
+height = 100.0
+
+[sub_resource type="CubeMesh" id=10]
+material = ExtResource( 2 )
+size = Vector3( 9, 12, 27 )
+
+[sub_resource type="CylinderMesh" id=11]
+material = ExtResource( 2 )
+top_radius = 4.5
+bottom_radius = 4.5
+height = 110.0
+
+[sub_resource type="CubeMesh" id=12]
+material = ExtResource( 2 )
+size = Vector3( 9, 12, 27 )
+
+[sub_resource type="CylinderMesh" id=13]
+material = ExtResource( 2 )
+top_radius = 4.5
+bottom_radius = 4.5
+height = 110.0
+
+[node name="Fence_section" type="Spatial"]
+script = ExtResource( 4 )
+
+[node name="Grid" type="Spatial" parent="."]
+
+[node name="grid" type="MeshInstance" parent="Grid"]
+transform = Transform( -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0, 1, 0, 1060, 715 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 5 )
+
+[node name="Poles" type="Spatial" parent="."]
+
+[node name="Pole1" type="Spatial" parent="Poles"]
+
+[node name="pole1" type="MeshInstance" parent="Poles/Pole1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1035, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="cap1" type="MeshInstance" parent="Poles/Pole1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2047.5, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="legup1" type="MeshInstance" parent="Poles/Pole1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 32.5, 0 )
+mesh = SubResource( 4 )
+material/0 = null
+
+[node name="legdown1" type="MeshInstance" parent="Poles/Pole1"]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0, 15, 0 )
+mesh = SubResource( 5 )
+material/0 = null
+
+[node name="Pole2" type="Spatial" parent="Poles"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1420 )
+
+[node name="pole2" type="MeshInstance" parent="Poles/Pole2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1035, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="cap2" type="MeshInstance" parent="Poles/Pole2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2047.5, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="legup2" type="MeshInstance" parent="Poles/Pole2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 32.5, 0 )
+mesh = SubResource( 4 )
+material/0 = null
+
+[node name="legdown2" type="MeshInstance" parent="Poles/Pole2"]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0, 15, 0 )
+mesh = SubResource( 5 )
+material/0 = null
+
+[node name="Barbells" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1060, 60 )
+
+[node name="barbell_right" type="MeshInstance" parent="Barbells"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1290 )
+mesh = SubResource( 6 )
+material/0 = null
+
+[node name="barbell_left" type="MeshInstance" parent="Barbells"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15 )
+mesh = SubResource( 6 )
+material/0 = null
+
+[node name="Crossbars" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 85, 60 )
+
+[node name="Planks" type="Spatial" parent="Crossbars"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 975, 0 )
+
+[node name="plank_front" type="MeshInstance" parent="Crossbars/Planks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 0, 650 )
+mesh = SubResource( 7 )
+material/0 = null
+
+[node name="plank_back" type="MeshInstance" parent="Crossbars/Planks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0, 650 )
+mesh = SubResource( 7 )
+material/0 = null
+
+[node name="crossbar_upper" type="MeshInstance" parent="Crossbars"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1935, 650 )
+mesh = SubResource( 8 )
+material/0 = null
+
+[node name="crossbar_lower" type="MeshInstance" parent="Crossbars"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15, 650 )
+mesh = SubResource( 8 )
+material/0 = null
+
+[node name="Upper_left_hinge" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1885, 0 )
+
+[node name="hinge_poleleft_upper" type="MeshInstance" parent="Upper_left_hinge"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 37.5 )
+mesh = SubResource( 9 )
+material/0 = null
+
+[node name="hinge1_barbleft_upper" type="MeshInstance" parent="Upper_left_hinge/hinge_poleleft_upper"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 56, 9 )
+mesh = SubResource( 10 )
+material/0 = null
+
+[node name="hinge2_barbleft_upper" type="MeshInstance" parent="Upper_left_hinge/hinge_poleleft_upper/hinge1_barbleft_upper"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -61, -9 )
+mesh = SubResource( 11 )
+material/0 = null
+
+[node name="Upper_right_hinge" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1885, 1420 )
+
+[node name="hinge_poleright_upper" type="MeshInstance" parent="Upper_right_hinge"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -37.5 )
+mesh = SubResource( 9 )
+material/0 = null
+
+[node name="hinge1_barbright_upper" type="MeshInstance" parent="Upper_right_hinge/hinge_poleright_upper"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 56, -9 )
+mesh = SubResource( 12 )
+material/0 = null
+
+[node name="hinge2_barbright_upper" type="MeshInstance" parent="Upper_right_hinge/hinge_poleright_upper/hinge1_barbright_upper"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -61, 9 )
+mesh = SubResource( 13 )
+material/0 = null
+
+[node name="Lower_left_hinge" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 185, 0 )
+
+[node name="hinge_poleleft_lower" type="MeshInstance" parent="Lower_left_hinge"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 37.5 )
+mesh = SubResource( 9 )
+material/0 = null
+
+[node name="hinge1_barbleft_lower" type="MeshInstance" parent="Lower_left_hinge/hinge_poleleft_lower"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 56, 9 )
+mesh = SubResource( 10 )
+material/0 = null
+
+[node name="hinge2_barbleft_lower" type="MeshInstance" parent="Lower_left_hinge/hinge_poleleft_lower/hinge1_barbleft_lower"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -61, -9 )
+mesh = SubResource( 11 )
+material/0 = null
+
+[node name="Lower_right_hinge" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 185, 1420 )
+
+[node name="hinge_poleright_lower" type="MeshInstance" parent="Lower_right_hinge"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -37.5 )
+mesh = SubResource( 9 )
+material/0 = null
+
+[node name="hinge1_barbright_lower" type="MeshInstance" parent="Lower_right_hinge/hinge_poleright_lower"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 56, -9 )
+mesh = SubResource( 12 )
+material/0 = null
+
+[node name="hinge2_barbright_lower" type="MeshInstance" parent="Lower_right_hinge/hinge_poleright_lower/hinge1_barbright_lower"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -61, 9 )
+mesh = SubResource( 13 )
+material/0 = null
