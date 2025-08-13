@@ -5,4 +5,6 @@
 	<robot_tag>SixAxisArm</robot_tag>
 	<use_drives_controller>true</use_drives_controller>
 	<check_serial_number>false</check_serial_number>
+	<kinematics_tag>ArmRobot:SixAxisArm</kinematics_tag>
+	<motion_system_type>DefaultSdc</motion_system_type>
 </RobotSelector>

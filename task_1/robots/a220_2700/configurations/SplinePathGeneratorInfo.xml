@@ -71,8 +71,8 @@
 			<max_angle_speed>3000.000000</max_angle_speed>
 			<acceleration_time>400.000000</acceleration_time>
 			<singular_criteria_deg>36.000000</singular_criteria_deg>
-			<max_deg>80.000000</max_deg>
-			<min_deg>-130.000000</min_deg>
+			<max_deg>130.000000</max_deg>
+			<min_deg>-80.000000</min_deg>
 			<max_line>1000.000000</max_line>
 			<min_line>-1000.000000</min_line>
 			<max_linear_speed_mm_sec>2000.000000</max_linear_speed_mm_sec>

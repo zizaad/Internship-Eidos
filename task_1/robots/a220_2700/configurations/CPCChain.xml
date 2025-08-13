@@ -77,7 +77,7 @@
 			<normal_z>1.0000000000</normal_z>
 			<centr_x>-0.0000</centr_x>
 			<centr_y>0.0000</centr_y>
-			<centr_z>160.0000</centr_z>
+			<centr_z>158.0000</centr_z>
 		</joint>
 	</joints>
 </CPCChain>
