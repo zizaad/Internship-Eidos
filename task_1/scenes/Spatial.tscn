@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://components_lib/v_positioner/materials/main.material" type="Material" id=1]
 [ext_resource path="res://components_lib/v_positioner/v_positioner.tscn" type="PackedScene" id=2]
@@ -9,10 +9,16 @@
 [ext_resource path="res://components_lib/fence/fence.tscn" type="PackedScene" id=7]
 [ext_resource path="res://components_lib/pallet_jack/pallet_jack.tscn" type="PackedScene" id=8]
 [ext_resource path="res://components_lib/a220_2700/a220_2700.tscn" type="PackedScene" id=9]
+[ext_resource path="res://components_lib/grab/grab.tscn" type="PackedScene" id=10]
+[ext_resource path="res://components_lib/box/box.tscn" type="PackedScene" id=11]
 
 [node name="Spatial" type="Spatial"]
 
 [node name="v_positioner" parent="." instance=ExtResource( 2 )]
+@Attachment@a220_2700/Attachment@owner_level = 2
+@Attachment@a220_2700/Attachment@state = 0
+@Attachment@a220_2700/Attachment@base_path = "Spatial/v_positioner/a220_2700/Joint1/Joint2/Joint3/Joint4/Joint5/Joint6/flange"
+@Attachment@a220_2700/Attachment@rel = Transform( -7.82311e-08, -1.86265e-09, -1, -6.98492e-10, 1, 0, 1, 1.5134e-09, -7.45058e-08, 6.62988, -0.47052, -10.8498 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 192.94 )
 pedestal_width = 700
 pedestal_height = 500
@@ -32,6 +38,66 @@ material = ExtResource( 1 )
 
 [node name="a220_2700" parent="v_positioner" instance=ExtResource( 9 )]
 transform = Transform( -4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 0, 500, 0 )
+in_scene_id = 1
+api_server_port = 8001
+safety_server_port = 10001
+drives_controller_port = 9001
+signal_bus_count = 1
+signal_buses_data/bus_1_/bus_type = 0
+signal_buses_data/bus_1_/bus_name = "dido"
+signal_buses_data/bus_1_/signal_holder_path = NodePath("RcsSignalsHolder")
+signal_buses_data/bus_1_/bus_ip = "127.0.0.1"
+signal_buses_data/bus_1_/bus_port = 10740
+signal_buses_data/bus_1_/handle_emulation = true
+signal_buses_data/bus_1_/inputs_memory_shift = 0
+signal_buses_data/bus_1_/inputs_memory_bytes = 1
+signal_buses_data/bus_1_/outputs_memory_shift = 0
+signal_buses_data/bus_1_/outputs_memory_bytes = 1
+signal_buses_data/bus_1_/delete_bus = null
+
+[node name="Attachment" type="Attachment" parent="v_positioner/a220_2700"]
+transform = Transform( 1, 1.5134e-09, 4.74149e-09, -6.98492e-10, 1, -2.07257e-16, -1.0162e-09, 1.86265e-09, 1, 1747.15, -0.47052, 2090.37 )
+base_path = NodePath("Spatial/v_positioner/a220_2700/Joint1/Joint2/Joint3/Joint4/Joint5/Joint6/flange")
+attachment_state = 0
+owner_level = 2
+
+[node name="grab" parent="v_positioner/a220_2700/Attachment" instance=ExtResource( 10 )]
+transform = Transform( 2.84217e-14, 1.62921e-07, 1, 1, -1.62921e-07, 1.42109e-14, 1.62921e-07, 1, -1.62921e-07, -7.2655, 1.21167, 0 )
+lifted_of_arms_mm = 210.0
+width_tip_of_arms_mm = 10.0
+width_of_arms_mm = 54.0
+lenght_of_arms_mm = 64.0
+radius_of_flange_mm = 42.0
+hight_of_flange_mm = 23.0
+do_grab = false
+grab_state = false
+
+[node name="RcsSignalsHolder" type="RcsSignalsHolder" parent="v_positioner/a220_2700"]
+di_count = 8
+_0_byte/0 = false
+_0_byte/1 = false
+_0_byte/2 = false
+_0_byte/3 = false
+_0_byte/4 = false
+_0_byte/5 = false
+_0_byte/6 = false
+_0_byte/7 = false
+sensors/add_sensor = null
+do_count = 8
+__0_byte/0 = false
+__0_byte/1 = false
+__0_byte/2 = false
+__0_byte/3 = false
+__0_byte/4 = false
+__0_byte/5 = false
+__0_byte/6 = false
+__0_byte/7 = false
+executive_devices/device_count = 1
+executive_devices/add_device = null
+executive_devices/1/byte_number = 0
+executive_devices/1/bit_number = 0
+executive_devices/1/link = NodePath("../Attachment/grab")
+executive_devices/1/delete_device = null
 
 [node name="conveyor" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4374.86, 1.40995, -1590.06 )
@@ -161,3 +227,11 @@ fence_length = 1500
 number_of_sections = 1
 width_edit_mode = 0
 standard_section_width = 1500
+
+[node name="box2" parent="." instance=ExtResource( 11 )]
+transform = Transform( 1, 8.10495e-09, 1.57668e-08, -8.10496e-09, 1, -4.47035e-08, -1.57668e-08, 4.47035e-08, 1, -758.501, 527.896, -1455.88 )
+height_mm = 100.0
+width_mm = 200.0
+depth_mm = 200.0
+opened_top = false
+opened_bottom = false

@@ -1,0 +1,347 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://components_lib/a12_1450/meshes/j4.tres" type="ArrayMesh" id=1]
+[ext_resource path="res://components_lib/a12_1450/meshes/tube12.tres" type="ArrayMesh" id=2]
+[ext_resource path="res://components_lib/a12_1450/scripts/a12_1450.gd" type="Script" id=3]
+[ext_resource path="res://components_lib/a12_1450/meshes/base.tres" type="ArrayMesh" id=4]
+[ext_resource path="res://components_lib/a12_1450/meshes/j1.tres" type="ArrayMesh" id=5]
+[ext_resource path="res://components_lib/a12_1450/meshes/tube2.mesh" type="ArrayMesh" id=6]
+[ext_resource path="res://components_lib/a12_1450/meshes/tube.mesh" type="ArrayMesh" id=7]
+[ext_resource path="res://components_lib/a12_1450/meshes/j5.tres" type="ArrayMesh" id=8]
+[ext_resource path="res://components_lib/a12_1450/meshes/j2.tres" type="ArrayMesh" id=9]
+[ext_resource path="res://components_lib/a12_1450/meshes/j5_1.tres" type="ArrayMesh" id=10]
+[ext_resource path="res://components_lib/a12_1450/meshes/j3.tres" type="ArrayMesh" id=11]
+[ext_resource path="res://components_lib/a12_1450/materials/black.material" type="Material" id=12]
+[ext_resource path="res://components_lib/a12_1450/meshes/tube22.mesh" type="ArrayMesh" id=13]
+[ext_resource path="res://components_lib/a12_1450/meshes/tube23.mesh" type="ArrayMesh" id=14]
+[ext_resource path="res://components_lib/a12_1450/meshes/tube1.tres" type="ArrayMesh" id=15]
+[ext_resource path="res://components_lib/a12_1450/meshes/j6_2.tres" type="ArrayMesh" id=16]
+[ext_resource path="res://components_lib/a12_1450/meshes/j6_1.tres" type="ArrayMesh" id=17]
+
+[sub_resource type="SphereMesh" id=1]
+radius = 18.0
+height = 36.0
+
+[sub_resource type="SphereMesh" id=2]
+radius = 18.0
+height = 36.0
+
+[node name="a12_1450" type="RobotEmulation"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0 )
+jog = true
+emulation_state = true
+start_emulation = null
+stop_emulation = null
+start_emulation_on_ready = true
+robot_dir = "res://robots/a12_1450"
+restart_robot = null
+generate_new_id = null
+reset_configuration = null
+reconfigure_ports_by_id = null
+api_server_port = 8003
+read_server_config = null
+update_server_config = null
+rcs_data_origin = "res://components_lib/a12_1450/rcs_data"
+reset_rcs_data = null
+read_safety_config = null
+update_safety_config = null
+reset_kinematics_config = null
+read_joints_config = null
+update_joints_config = null
+drives_controller_port = 8888
+joints_count = 6
+joints_with_positioners = 6
+set_current_pos_as_home = null
+reset_to_home = null
+joints_data/joint_1_/joint_path = NodePath("Joint 1")
+joints_data/joint_1_/home_position = 0.0
+joints_data/joint_1_/is_linear = false
+joints_data/joint_1_/reduction_rate = 121.0
+joints_data/joint_1_/speed_rpm = 3000.0
+joints_data/joint_1_/steps_per_revolution = 2000
+joints_data/joint_1_/joint_min_deg_or_mm = -180.0
+joints_data/joint_1_/joint_max_deg_or_mm = 180.0
+joints_data/joint_1_/allow_deustation = false
+joints_data/joint_1_/ignore_z_mark = false
+joints_data/joint_1_/acceleration_time_ms = 500.0
+joints_data/joint_1_/d_mm = 351.0
+joints_data/joint_1_/theta_deg = 0.0
+joints_data/joint_1_/r_mm = 184.0
+joints_data/joint_1_/alpha_deg = -90.0
+joints_data/joint_2_/joint_path = NodePath("Joint 1/Joint 2")
+joints_data/joint_2_/home_position = 0.0
+joints_data/joint_2_/is_linear = false
+joints_data/joint_2_/reduction_rate = 121.0
+joints_data/joint_2_/speed_rpm = 3000.0
+joints_data/joint_2_/steps_per_revolution = 2000
+joints_data/joint_2_/joint_min_deg_or_mm = -90.0
+joints_data/joint_2_/joint_max_deg_or_mm = 165.0
+joints_data/joint_2_/allow_deustation = false
+joints_data/joint_2_/ignore_z_mark = false
+joints_data/joint_2_/acceleration_time_ms = 600.0
+joints_data/joint_2_/d_mm = 0.0
+joints_data/joint_2_/theta_deg = -90.0
+joints_data/joint_2_/r_mm = 530.0
+joints_data/joint_2_/alpha_deg = -180.0
+joints_data/joint_3_/joint_path = NodePath("Joint 1/Joint 2/Joint 3")
+joints_data/joint_3_/home_position = 0.0
+joints_data/joint_3_/is_linear = false
+joints_data/joint_3_/reduction_rate = 121.0
+joints_data/joint_3_/speed_rpm = 4000.0
+joints_data/joint_3_/steps_per_revolution = 2000
+joints_data/joint_3_/joint_min_deg_or_mm = -70.0
+joints_data/joint_3_/joint_max_deg_or_mm = 190.0
+joints_data/joint_3_/allow_deustation = false
+joints_data/joint_3_/ignore_z_mark = false
+joints_data/joint_3_/acceleration_time_ms = 600.0
+joints_data/joint_3_/d_mm = 0.0
+joints_data/joint_3_/theta_deg = 0.0
+joints_data/joint_3_/r_mm = 0.0
+joints_data/joint_3_/alpha_deg = 90.0
+joints_data/joint_4_/joint_path = NodePath("Joint 1/Joint 2/Joint 3/Joint 4")
+joints_data/joint_4_/home_position = 0.0
+joints_data/joint_4_/is_linear = false
+joints_data/joint_4_/reduction_rate = 101.0
+joints_data/joint_4_/speed_rpm = 3000.0
+joints_data/joint_4_/steps_per_revolution = 2000
+joints_data/joint_4_/joint_min_deg_or_mm = -360.0
+joints_data/joint_4_/joint_max_deg_or_mm = 360.0
+joints_data/joint_4_/allow_deustation = false
+joints_data/joint_4_/ignore_z_mark = false
+joints_data/joint_4_/acceleration_time_ms = 500.0
+joints_data/joint_4_/d_mm = 595.0
+joints_data/joint_4_/theta_deg = 0.0
+joints_data/joint_4_/r_mm = 0.0
+joints_data/joint_4_/alpha_deg = -90.0
+joints_data/joint_5_/joint_path = NodePath("Joint 1/Joint 2/Joint 3/Joint 4/Joint 5")
+joints_data/joint_5_/home_position = 0.0
+joints_data/joint_5_/is_linear = false
+joints_data/joint_5_/reduction_rate = 120.0
+joints_data/joint_5_/speed_rpm = 3000.0
+joints_data/joint_5_/steps_per_revolution = 2000
+joints_data/joint_5_/joint_min_deg_or_mm = -125.0
+joints_data/joint_5_/joint_max_deg_or_mm = 125.0
+joints_data/joint_5_/allow_deustation = false
+joints_data/joint_5_/ignore_z_mark = false
+joints_data/joint_5_/acceleration_time_ms = 400.0
+joints_data/joint_5_/d_mm = 0.0
+joints_data/joint_5_/theta_deg = -180.0
+joints_data/joint_5_/r_mm = 0.0
+joints_data/joint_5_/alpha_deg = -90.0
+joints_data/joint_6_/joint_path = NodePath("Joint 1/Joint 2/Joint 3/Joint 4/Joint 5/Joint 6")
+joints_data/joint_6_/home_position = 0.0
+joints_data/joint_6_/is_linear = false
+joints_data/joint_6_/reduction_rate = 100.0
+joints_data/joint_6_/speed_rpm = 5000.0
+joints_data/joint_6_/steps_per_revolution = 2000
+joints_data/joint_6_/joint_min_deg_or_mm = -360.0
+joints_data/joint_6_/joint_max_deg_or_mm = 360.0
+joints_data/joint_6_/allow_deustation = false
+joints_data/joint_6_/ignore_z_mark = false
+joints_data/joint_6_/acceleration_time_ms = 400.0
+joints_data/joint_6_/d_mm = 166.0
+joints_data/joint_6_/theta_deg = 180.0
+joints_data/joint_6_/r_mm = 0.0
+joints_data/joint_6_/alpha_deg = 0.0
+add_positioner = null
+read_signals_config = null
+update_signals_config = null
+add_bus = null
+read_from_tool_config = null
+save_to_tool_config = null
+add_tool = null
+tool_1/clear_trail = null
+read_from_frame_config = null
+save_to_frame_config = null
+add_frame = null
+script = ExtResource( 3 )
+
+[node name="base" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -6.33375e-06, 144.899 )
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="Joint 1" type="RcsJoint" parent="."]
+transform = Transform( 1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0 )
+isInverse = true
+base_rotation = Vector3( -180, 0, 0 )
+
+[node name="j1_attach" type="AttachmentBase" parent="Joint 1"]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -151.76, 8.32756e-12, -187.984 )
+redirect_selection = true
+
+[node name="j1" type="MeshInstance" parent="Joint 1"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -9.56188, 113.575, -231.855 )
+redirect_selection = true
+mesh = ExtResource( 5 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="tube2" type="MeshInstance" parent="Joint 1"]
+transform = Transform( 1, 0, 0, 0, 1, -4.88762e-07, 0, 4.88762e-07, 1, -4.44089e-16, -1.56204e-08, 0.119118 )
+redirect_selection = true
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="tube3" type="MeshInstance" parent="Joint 1"]
+transform = Transform( 1, 0, 0, 0, 1, -4.88762e-07, 0, 4.88762e-07, 1, 0, -1.56204e-08, 0.119118 )
+redirect_selection = true
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="sphere" type="MeshInstance" parent="Joint 1"]
+transform = Transform( 1, 0, 0, 0, -4.37112e-08, 1, 0, -1, -4.37112e-08, 138.436, 205.277, -275.243 )
+redirect_selection = true
+mesh = SubResource( 1 )
+material/0 = ExtResource( 12 )
+
+[node name="tube" type="Spatial" parent="Joint 1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 127.049, 205.312, -265.151 )
+redirect_selection = true
+
+[node name="tube2" type="MeshInstance" parent="Joint 1/tube"]
+transform = Transform( 1, 0, -2.01628e-15, -1.77636e-15, 1, 1.42109e-14, -2.01628e-15, -1.42109e-14, 1, -129.532, -204.415, 270.407 )
+redirect_selection = true
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="sphere2" type="MeshInstance" parent="Joint 1/tube"]
+transform = Transform( 1, 0, 0, 0, -4.37112e-08, 1, 0, -1, -4.37112e-08, 43.4534, -21.0337, -163.368 )
+redirect_selection = true
+mesh = SubResource( 1 )
+material/0 = ExtResource( 12 )
+
+[node name="Joint 2" type="RcsJoint" parent="Joint 1"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 184, 0, -351 )
+isInverse = true
+base_translation = Vector3( 184, 0, -351 )
+base_rotation = Vector3( -90, 0, 0 )
+
+[node name="j2_attach" type="AttachmentBase" parent="Joint 1/Joint 2"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 232, 232 )
+redirect_selection = true
+
+[node name="j2" type="MeshInstance" parent="Joint 1/Joint 2"]
+transform = Transform( 1, 0, 0, 0, 1, -1.19209e-07, 0, 1.19209e-07, 1, -54.595, 122.249, 128.316 )
+redirect_selection = true
+mesh = ExtResource( 9 )
+material/0 = null
+material/1 = null
+
+[node name="tube2" type="MeshInstance" parent="Joint 1/Joint 2"]
+transform = Transform( 1, 9.76996e-15, -4.87926e-15, -2.37471e-15, -5.32473e-07, -1, 2.66454e-15, 1, -5.32473e-07, -189.916, -341.828, -2.36469e-11 )
+redirect_selection = true
+mesh = ExtResource( 13 )
+material/0 = null
+
+[node name="sphere2" type="MeshInstance" parent="Joint 1/Joint 2"]
+transform = Transform( 1, 0, 2.26148e-22, 1.9253e-27, 1, -1.84741e-13, -1.10114e-20, 1.84741e-13, 1, 8.40529, 492.018, 193.771 )
+redirect_selection = true
+mesh = SubResource( 1 )
+material/0 = ExtResource( 12 )
+
+[node name="tube" type="Spatial" parent="Joint 1/Joint 2"]
+transform = Transform( 1, 0, 4.37114e-08, 4.37114e-08, 1.91068e-15, -1, 0, 0.999999, 1.91069e-15, 7.45895, 500.858, 195.384 )
+redirect_selection = true
+
+[node name="sphere3" type="MeshInstance" parent="Joint 1/Joint 2/tube"]
+transform = Transform( 1, 1.32248e-07, 2.98023e-08, 1.49012e-08, -2.98023e-08, 1, -4.65661e-08, -1, 1.18585e-20, 70.3435, 24.9289, -43.092 )
+redirect_selection = true
+mesh = SubResource( 1 )
+material/0 = ExtResource( 12 )
+
+[node name="tube2" type="MeshInstance" parent="Joint 1/Joint 2/tube"]
+transform = Transform( 1, 2.66454e-15, -1.05879e-21, -2.66454e-15, 1, -1.12847e-35, 1.05879e-21, 1.41059e-35, 1, -192.288, -195.384, 840.665 )
+redirect_selection = true
+mesh = ExtResource( 14 )
+material/0 = null
+
+[node name="Joint 3" type="RcsJoint" parent="Joint 1/Joint 2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 530, 0 )
+base_translation = Vector3( 0, 530, 0 )
+
+[node name="j3_attach" type="AttachmentBase" parent="Joint 1/Joint 2/Joint 3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 64.1124, 125.461, 0 )
+redirect_selection = true
+
+[node name="j3" type="MeshInstance" parent="Joint 1/Joint 2/Joint 3"]
+transform = Transform( 1, 0, 0, 0, 1, -1.19209e-07, 0, 1.19209e-07, 1, 167.825, 61.8358, 121.649 )
+redirect_selection = true
+mesh = ExtResource( 11 )
+material/0 = null
+material/1 = null
+
+[node name="tube" type="MeshInstance" parent="Joint 1/Joint 2/Joint 3"]
+transform = Transform( 1, 9.76996e-15, -4.87926e-15, -2.37471e-15, -5.32473e-07, -1, 2.66454e-15, 1, -5.32473e-07, -185, -868.823, -8.75082e-06 )
+redirect_selection = true
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="sphere3" type="MeshInstance" parent="Joint 1/Joint 2/Joint 3"]
+transform = Transform( 1, 0, 2.26148e-22, 1.9253e-27, 1, -1.84741e-13, -1.10114e-20, 1.84741e-13, 1, 79.3358, 14.6549, 221.235 )
+redirect_selection = true
+mesh = SubResource( 2 )
+material/0 = ExtResource( 12 )
+
+[node name="Joint 4" type="RcsJoint" parent="Joint 1/Joint 2/Joint 3"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
+base_rotation = Vector3( 0, 90, 0 )
+
+[node name="j4_attach" type="AttachmentBase" parent="Joint 1/Joint 2/Joint 3/Joint 4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.01863e-10, 53.5003, 343.131 )
+redirect_selection = true
+
+[node name="j4" type="MeshInstance" parent="Joint 1/Joint 2/Joint 3/Joint 4"]
+transform = Transform( -1.62921e-07, -1.19209e-07, -1, 8.47033e-21, 1, -1.19209e-07, 1, -1.94217e-14, -1.62921e-07, -0.0762074, 2.00549, 422.941 )
+redirect_selection = true
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="Joint 5" type="RcsJoint" parent="Joint 1/Joint 2/Joint 3/Joint 4"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 595 )
+isInverse = true
+base_translation = Vector3( 0, 0, 595 )
+base_rotation = Vector3( 0, 90, 0 )
+
+[node name="j5" type="Spatial" parent="Joint 1/Joint 2/Joint 3/Joint 4/Joint 5"]
+transform = Transform( -1, 3.88433e-14, 3.25841e-07, -6.77626e-21, 1, -1.19209e-07, -3.25841e-07, -1.19209e-07, -1, 14.904, -60.8385, -19.5762 )
+redirect_selection = true
+
+[node name="j5" type="MeshInstance" parent="Joint 1/Joint 2/Joint 3/Joint 4/Joint 5/j5"]
+redirect_selection = true
+mesh = ExtResource( 8 )
+material/0 = null
+material/1 = null
+
+[node name="j5_1" type="MeshInstance" parent="Joint 1/Joint 2/Joint 3/Joint 4/Joint 5/j5"]
+transform = Transform( 1, -1.14836e-09, 2.38415e-07, -2.84216e-14, 0.999988, 0.00481672, -2.38418e-07, -0.00481672, 0.999988, 146.4, 60.8425, -19.5166 )
+redirect_selection = true
+mesh = ExtResource( 10 )
+material/0 = null
+material/1 = null
+
+[node name="Joint 6" type="RcsJoint" parent="Joint 1/Joint 2/Joint 3/Joint 4/Joint 5"]
+transform = Transform( -4.37114e-08, -2.57622e-15, -1, -5.8937e-08, 1, -1.69407e-21, 1, 5.8937e-08, -4.37114e-08, -166, 0, 0 )
+base_translation = Vector3( -166, 0, 0 )
+base_rotation = Vector3( 9.70631e-20, -90, -3.37684e-06 )
+
+[node name="j6" type="Spatial" parent="Joint 1/Joint 2/Joint 3/Joint 4/Joint 5/Joint 6"]
+redirect_selection = true
+
+[node name="j6" type="MeshInstance" parent="Joint 1/Joint 2/Joint 3/Joint 4/Joint 5/Joint 6/j6"]
+transform = Transform( -4.37114e-08, 0.00481654, -0.999988, -2.57622e-15, 0.999988, 0.00481654, 1, 2.1054e-10, -4.37109e-08, -0.0596106, 0.00402832, -34.5035 )
+redirect_selection = true
+mesh = ExtResource( 16 )
+material/0 = null
+
+[node name="j6_1" type="MeshInstance" parent="Joint 1/Joint 2/Joint 3/Joint 4/Joint 5/Joint 6/j6"]
+transform = Transform( -4.37114e-08, 0.00481654, -0.999988, -2.57622e-15, 0.999988, 0.00481654, 1, 2.1054e-10, -4.37109e-08, -0.0596106, 0.00402832, -34.5035 )
+redirect_selection = true
+mesh = ExtResource( 17 )
+material/0 = null
+
+[node name="Flange" type="AttachmentBase" parent="Joint 1/Joint 2/Joint 3/Joint 4/Joint 5/Joint 6"]
+transform = Transform( 1, -7.10543e-15, 1.91069e-15, 0, -4.37114e-08, -1, 7.10543e-15, 1, -4.37114e-08, 0, 0, 0 )
+redirect_selection = true

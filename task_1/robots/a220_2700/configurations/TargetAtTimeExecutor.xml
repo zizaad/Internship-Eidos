@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TargetAtTimeExecutor>
+	<frameDurationMs>10</frameDurationMs>
+	<maxBufferDurationMs>2000</maxBufferDurationMs>
+	<minBufferDurationMs>100</minBufferDurationMs>
+	<smoothCmdDelayMs>50</smoothCmdDelayMs>
+	<timeScaleDampingTimeMs>200</timeScaleDampingTimeMs>
+	<computePerIterationdMs>50</computePerIterationdMs>
+</TargetAtTimeExecutor>

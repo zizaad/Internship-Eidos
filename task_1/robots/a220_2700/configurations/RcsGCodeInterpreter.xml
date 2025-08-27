@@ -2,57 +2,107 @@
 <RcsGCodeInterpreter>
 	<CommonParameters>
 		<EnableGCodeInterpreter>false</EnableGCodeInterpreter>
+		<ReactionOnUnknownCommand>Error</ReactionOnUnknownCommand>
 	</CommonParameters>
 	<FileReaderSettings>
 		<ReadLinesAmount>10</ReadLinesAmount>
-		<IsUsingFileExecution>true</IsUsingFileExecution>
-		<GCodeFilesDirectory>GCodePrograms</GCodeFilesDirectory>
+		<GCodeFilesDirectory>/RcsData/GCodePrograms/</GCodeFilesDirectory>
 	</FileReaderSettings>
 	<SpindleConfiguration>
 		<ClockwiseRotationSignalAddress>o1.0.0</ClockwiseRotationSignalAddress>
 		<CounterClockwiseRotationSignalAddress>o1.0.0</CounterClockwiseRotationSignalAddress>
-		<AutoSpeedSettingEnabled>false</AutoSpeedSettingEnabled>
-		<SpeedSettingSignal>DefaultSignalName</SpeedSettingSignal>
-		<AlarmSignalEnabled>false</AlarmSignalEnabled>
-		<AlarmSignalAddress>o1.0.0</AlarmSignalAddress>
+		<SpeedSettingSignal>speed_set_signal</SpeedSettingSignal>
 	</SpindleConfiguration>
 	<InstrumentsConfiguration>
 		<DefaultInstrument>Flange</DefaultInstrument>
-		<ShrinkSignalAddress>o1.0.0</ShrinkSignalAddress>
-		<InstrumentationCartridgeType>JointControlledCarousel</InstrumentationCartridgeType>
+		<ShrinkSignalAddress>o1.0.3</ShrinkSignalAddress>
+		<ShrinkSignalWait>1000</ShrinkSignalWait>
+		<InstrumentationCartridgeType>Manual</InstrumentationCartridgeType>
+		<DefaultCoordinateSystem>World</DefaultCoordinateSystem>
+		<FirstCartridgeInstrumentX>0</FirstCartridgeInstrumentX>
+		<FirstCartridgeInstrumentY>0</FirstCartridgeInstrumentY>
+		<FirstCartridgeInstrumentZ>0</FirstCartridgeInstrumentZ>
 		<CalibrationParameters>
-			<CalibrationType>ContactSensor</CalibrationType>
-			<RecalibrationEnabled>false</RecalibrationEnabled>
 			<DiscreteSignalAddress>i1.0.0</DiscreteSignalAddress>
-			<AnalogCalibrationSensor>DefaultGenerationSensor</AnalogCalibrationSensor>
-			<CalibrationMaxStep>10.000000</CalibrationMaxStep>
-			<SensorHeight>0.000000</SensorHeight>
-			<SpeedToSensor>100.000000</SpeedToSensor>
+			<AnalogCalibrationSensor>calibration_sensor_signal</AnalogCalibrationSensor>
+			<CalibrationMaxStep>100</CalibrationMaxStep>
+			<SensorHeight>0</SensorHeight>
+			<SpeedToSensor>100</SpeedToSensor>
+			<PermissibleDiscrepancy>5</PermissibleDiscrepancy>
+			<CompareToConfiguration>false</CompareToConfiguration>
+			<CalibrationCS>World</CalibrationCS>
+			<SensorX>0</SensorX>
+			<SensorY>0</SensorY>
+			<SensorZ>0</SensorZ>
+			<SafeMoveHeight>0</SafeMoveHeight>
 		</CalibrationParameters>
 		<TableCellsParameters>
-			<DefaultCoordinateSystem>World</DefaultCoordinateSystem>
-			<SafeHeight>600.000000</SafeHeight>
-			<ColumnStep>10.000000</ColumnStep>
-			<RowsStep>10.000000</RowsStep>
-			<FirstCartridgeInstrumentX>550.000000</FirstCartridgeInstrumentX>
-			<FirstCartridgeInstrumentY>-150.000000</FirstCartridgeInstrumentY>
-			<FirstCartridgeInstrumentZ>500.000000</FirstCartridgeInstrumentZ>
+			<SafeHeight>0</SafeHeight>
+			<ColumnStep>0</ColumnStep>
+			<RowsStep>0</RowsStep>
 			<ColumnsAmount>1</ColumnsAmount>
 			<RowsAmount>1</RowsAmount>
 		</TableCellsParameters>
 	</InstrumentsConfiguration>
-	<InstrumentsList/>
-	<ConfigureMFunctions/>
+	<Instruments>
+		<InstrumentsFilePathTag>RcsData/Cnc/Drills.xml</InstrumentsFilePathTag>
+		<LaunchInstrumentSlot>0</LaunchInstrumentSlot>
+	</Instruments>
+	<MSignalsSettingsTree>
+		<ConfigureMFunctions/>
+		<M3TimeTag>2000</M3TimeTag>
+		<M4TimeTag>2000</M4TimeTag>
+		<M5TimeTag>2000</M5TimeTag>
+		<STimeTag>2000</STimeTag>
+	</MSignalsSettingsTree>
 	<DefaultMoveParameters>
 		<CoordinateSystem>World</CoordinateSystem>
-		<DefaultAcceleration>50.000000</DefaultAcceleration>
-		<IdleStroke>100.000000</IdleStroke>
-		<IdleStrokePtp>100.000000</IdleStrokePtp>
-		<DefaultSmoothRadius>10.000000</DefaultSmoothRadius>
+		<DefaultAcceleration>100</DefaultAcceleration>
+		<IdleStrokeSpeed>100</IdleStrokeSpeed>
+		<DefaultSmoothRadius>0</DefaultSmoothRadius>
+		<HomePosition>
+			<HomePositionX>0</HomePositionX>
+			<HomePositionY>0</HomePositionY>
+			<HomePositionZ>0</HomePositionZ>
+		</HomePosition>
 	</DefaultMoveParameters>
-	<ReactionOnUnknownCommand>Error</ReactionOnUnknownCommand>
 	<WidgetConfigurationParameters>
 		<EnableSpindleSpeedWidget>false</EnableSpindleSpeedWidget>
 		<EnableSpindleStateWidget>false</EnableSpindleStateWidget>
 	</WidgetConfigurationParameters>
+	<UIComponentsTreeTag>
+		<MainViewControlPanel>
+			<InstrumentsControlPanelTreeTag>
+				<DisplayInstrumentsControlPanelTag>true</DisplayInstrumentsControlPanelTag>
+				<DisplayedInstrumentsControlPanelItemsTag>
+					<DisplayLengthTag>true</DisplayLengthTag>
+					<DisplayWidthTag>true</DisplayWidthTag>
+					<DisplayActiveInstrumentIDTag>true</DisplayActiveInstrumentIDTag>
+					<DisplayCompensationInstrumentIDTag>true</DisplayCompensationInstrumentIDTag>
+				</DisplayedInstrumentsControlPanelItemsTag>
+			</InstrumentsControlPanelTreeTag>
+			<FeedRateControlPanelTreeTag>
+				<DisplayFeedRateControlPanelTag>true</DisplayFeedRateControlPanelTag>
+				<DisplayedFeedRateControlPanelItemsTag>
+					<DisplayCurrentFeedRate>true</DisplayCurrentFeedRate>
+				</DisplayedFeedRateControlPanelItemsTag>
+			</FeedRateControlPanelTreeTag>
+			<SpindleSpeedControlPanelTreeTag>
+				<DisplaySpindleSpeedControlPanelTag>true</DisplaySpindleSpeedControlPanelTag>
+				<DisplayedSpindleSpeedControlPanelItems>
+					<DisplayCurrentSpindleSpeed>true</DisplayCurrentSpindleSpeed>
+					<SpindleSpeedOverrideControlTreeTag>
+						<DisplaySpindleSpeedOverrideControl>true</DisplaySpindleSpeedOverrideControl>
+						<DefaultValuePercentTag>100</DefaultValuePercentTag>
+						<ChangeStepTag>1</ChangeStepTag>
+						<MaxValuePercentTag>200</MaxValuePercentTag>
+						<MinValuePercentTag>0</MinValuePercentTag>
+					</SpindleSpeedOverrideControlTreeTag>
+				</DisplayedSpindleSpeedControlPanelItems>
+			</SpindleSpeedControlPanelTreeTag>
+		</MainViewControlPanel>
+	</UIComponentsTreeTag>
+	<CncFramesSettings>
+		<FramesFilePath>RcsData/Cnc/CncFrames.xml</FramesFilePath>
+	</CncFramesSettings>
 </RcsGCodeInterpreter>

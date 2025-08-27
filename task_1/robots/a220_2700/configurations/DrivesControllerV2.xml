@@ -3,7 +3,7 @@
 	<Base>
 		<BindAddr>0.0.0.0</BindAddr>
 		<BindPort>15000</BindPort>
-		<ServoPort>8889</ServoPort>
+		<ServoPort>9001</ServoPort>
 	</Base>
 	<ReplyTimeouts>
 		<Default>500</Default>
@@ -20,15 +20,6 @@
 		5000
 		<!--ms-->
 	</IdleTimeout>
-	<ExchangeDelay>
-		600
-		<!--us, not in use-->
-	</ExchangeDelay>
-	<ServoStartDelay>
-		12
-		<!--ms, not in use-->
-	</ServoStartDelay>
-	<NormalEncDiff>5</NormalEncDiff>
 	<DefaultAnswerWaitMs>50</DefaultAnswerWaitMs>
 	<GetProgressAnswerWaitMs>40</GetProgressAnswerWaitMs>
 	<GetProgressPeriodMs>40</GetProgressPeriodMs>
@@ -42,4 +33,5 @@
 	<MaxPauseTimeMs>800</MaxPauseTimeMs>
 	<MaxCancelTimeMs>700</MaxCancelTimeMs>
 	<EnableServiceNotifications>false</EnableServiceNotifications>
+	<keepReadyByWakeUpCmd>false</keepReadyByWakeUpCmd>
 </DrivesControllerV2>

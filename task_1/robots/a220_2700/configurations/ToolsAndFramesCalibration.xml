@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ToolsAndFramesCalibration>
+	<FourPointToolCalibration>
+		<FourPointAccuracyThershold>2000</FourPointAccuracyThershold>
+	</FourPointToolCalibration>
+</ToolsAndFramesCalibration>

@@ -1,0 +1,19 @@
+[2025-08-27 12:25:46.743] [SdcLog] [info] SdcLog : got logger
+[2025-08-27 12:25:46.818] [SdcLog] [info] ResetRowId, result:true
+[2025-08-27 12:25:46.818] [SdcLog] [info] StateChanged:7
+[2025-08-27 12:25:46.821] [SdcLog] [info] DisableDrives, result:true
+[2025-08-27 12:25:46.821] [SdcLog] [info] ResetErrorsSilent, result:true
+[2025-08-27 12:25:46.821] [SdcLog] [info] Connection restored
+[2025-08-27 12:25:49.824] [SdcLog] [info] StateChanged:1
+[2025-08-27 12:25:49.827] [SdcLog] [info] ResetRowId, result:true
+[2025-08-27 12:26:04.984] [SdcLog] [info] ResetRowId, result:true
+[2025-08-27 12:26:04.984] [SdcLog] [info] Update targets on ready
+[2025-08-27 12:26:04.984] [SdcLog] [info] StateChanged:2
+[2025-08-27 12:26:04.984] [SdcLog] [info] ResetErrorsSilent, result:true
+[2025-08-27 12:26:04.991] [SdcLog] [info] StateChanged:3
+[2025-08-27 12:26:05.484] [SdcLog] [info] StateChanged:4
+[2025-08-27 12:26:14.847] [SdcLog] [info] StateChanged:2
+[2025-08-27 12:26:14.865] [SdcLog] [info] StateChanged:8
+[2025-08-27 12:26:14.869] [SdcLog] [info] StateChanged:1
+[2025-08-27 12:26:14.873] [SdcLog] [info] ResetRowId, result:true
+[2025-08-27 12:26:19.851] [SdcLog] [info] DisableDrives, result:true

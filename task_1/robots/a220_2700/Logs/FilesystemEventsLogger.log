@@ -1,0 +1,21 @@
+[2025-08-27 12:25:46.746] [FilesystemEventsLogger] [info] [RcsService] start to track file: C:\Users\ziza\Desktop\sim_bin_v4_new\projects\task_1\robots\a220_2700\RcsData\GlobalDataTools.xml: event: 0x21152d5ede0
+[2025-08-27 12:25:46.746] [FilesystemEventsLogger] [info] [RcsService] start to track file: C:\Users\ziza\Desktop\sim_bin_v4_new\projects\task_1\robots\a220_2700\RcsData\GlobalDataFrames.xml: event: 0x21154a3b220
+[2025-08-27 12:25:46.747] [FilesystemEventsLogger] [info] [RcsService] start to track file: C:\Users\ziza\Desktop\sim_bin_v4_new\projects\task_1\robots\a220_2700\RcProgramFolder: event: 0x21154a3b340
+[2025-08-27 12:25:46.814] [FilesystemEventsLogger] [info] [RcsService] start to track file: C:\Users\ziza\Desktop\sim_bin_v4_new\projects\task_1\robots\a220_2700\RcsData\SignalTokens.xml: event: 0x21154b70c20
+[2025-08-27 12:25:46.816] [FilesystemEventsLogger] [info] [RcsService] start to track file: C:\Users\ziza\Desktop\sim_bin_v4_new\projects\task_1\robots\a220_2700\RcsData\GlobalVariables\GlobalVariablesMetaFile.xml: event: 0x21154b70440
+[2025-08-27 12:25:46.816] [FilesystemEventsLogger] [info] [RcsService] start to track file: C:\Users\ziza\Desktop\sim_bin_v4_new\projects\task_1\robots\a220_2700\RcsData\GlobalVariables\GroupsData.xml: event: 0x21154b70560
+[2025-08-27 12:25:46.841] [FilesystemEventsLogger] [info] [RcsService] going to launch watchdog thread
+[2025-08-27 12:25:46.841] [FilesystemEventsLogger] [info] [RcsService] launch watchdog thread
+[2025-08-27 12:25:46.841] [FilesystemEventsLogger] [info] [RcsService] launching watchdog loop
+[2025-08-27 12:25:46.841] [FilesystemEventsLogger] [info] [RcsService] watchdog event: file `GroupsData.xml`, event: `Rename:0x21154b70560`
+[2025-08-27 12:25:46.841] [FilesystemEventsLogger] [info] [RcsService] invoke event callback on C:\Users\ziza\Desktop\sim_bin_v4_new\projects\task_1\robots\a220_2700\RcsData\GlobalVariables\GroupsData.xml, event: 0x21154b70560
+[2025-08-27 12:25:46.841] [FilesystemEventsLogger] [info] [RcsService] watchdog event: file `GroupsData.xml`, event: `Rename:0x21154b70560`
+[2025-08-27 12:25:46.841] [FilesystemEventsLogger] [info] [RcsService] invoke event callback on C:\Users\ziza\Desktop\sim_bin_v4_new\projects\task_1\robots\a220_2700\RcsData\GlobalVariables\GroupsData.xml, event: 0x21154b70560
+[2025-08-27 12:25:46.841] [FilesystemEventsLogger] [info] [RcsService] watchdog event: file `GroupsData.xml`, event: `Change:0x21154b70560`
+[2025-08-27 12:25:46.841] [FilesystemEventsLogger] [info] [RcsService] invoke event callback on C:\Users\ziza\Desktop\sim_bin_v4_new\projects\task_1\robots\a220_2700\RcsData\GlobalVariables\GroupsData.xml, event: 0x21154b70560
+[2025-08-27 12:25:46.922] [FilesystemEventsLogger] [info] [RcsService] watchdog event: file `GroupsData.xml`, event: `Rename:0x21154b70560`
+[2025-08-27 12:25:46.922] [FilesystemEventsLogger] [info] [RcsService] invoke event callback on C:\Users\ziza\Desktop\sim_bin_v4_new\projects\task_1\robots\a220_2700\RcsData\GlobalVariables\GroupsData.xml, event: 0x21154b70560
+[2025-08-27 12:25:46.922] [FilesystemEventsLogger] [info] [RcsService] watchdog event: file `GroupsData.xml`, event: `Rename:0x21154b70560`
+[2025-08-27 12:25:46.922] [FilesystemEventsLogger] [info] [RcsService] invoke event callback on C:\Users\ziza\Desktop\sim_bin_v4_new\projects\task_1\robots\a220_2700\RcsData\GlobalVariables\GroupsData.xml, event: 0x21154b70560
+[2025-08-27 12:25:46.922] [FilesystemEventsLogger] [info] [RcsService] watchdog event: file `GroupsData.xml`, event: `Change:0x21154b70560`
+[2025-08-27 12:25:46.922] [FilesystemEventsLogger] [info] [RcsService] invoke event callback on C:\Users\ziza\Desktop\sim_bin_v4_new\projects\task_1\robots\a220_2700\RcsData\GlobalVariables\GroupsData.xml, event: 0x21154b70560

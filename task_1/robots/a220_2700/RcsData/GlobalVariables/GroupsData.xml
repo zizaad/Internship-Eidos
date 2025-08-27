@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VariableGroups>
-
+	<Group>
+		<Name>sys_autorun</Name>
+		<Id>1</Id>
+		<IsSystem>true</IsSystem>
+		<Vars>
+			<Id>1</Id>
+			<Id>3</Id>
+			<Id>5</Id>
+		</Vars>
+	</Group>
+	<Group>
+		<Name>system_group</Name>
+		<Id>2</Id>
+		<IsSystem>true</IsSystem>
+		<Vars>
+			<Id>2</Id>
+		</Vars>
+	</Group>
 	<Group>
 		<Name>dialog</Name>
 		<Id>6</Id>

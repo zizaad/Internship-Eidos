@@ -9,19 +9,25 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node",
+"class": "gripper_library",
+"language": "GDScript",
+"path": "res://components_lib/grab/scripts/grab.gd"
+}, {
 "base": "Spatial",
 "class": "rotate_H_positioner",
 "language": "GDScript",
 "path": "res://components_lib/frame_for_positioner/scripts/frame_for_positioner.gd"
 } ]
 _global_script_class_icons={
+"gripper_library": "",
 "rotate_H_positioner": ""
 }
 
 [Rcs]
 
 screenshots_folder="res://screenshots"
-ProcessManager/launch_HMI_at_startup=false
+ProcessManager/launch_HMI_at_startup=true
 ProcessManager/divide_into_subprojects=true
 ProcessManager/default_subproject=""
 ProcessManager/disabled_rcs_processes=""

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OpcUaServer>
+	<bind_port>4840</bind_port>
+	<access_write>true</access_write>
+</OpcUaServer>

@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RcProgramInterpreter>
-	<PythonHomeFolder>Python/</PythonHomeFolder>
-	<PreprocessorOutrunning>4</PreprocessorOutrunning>
+	<PythonHomeFolder/>
+	<PreprocessorOutrunning>0</PreprocessorOutrunning>
+	<AffinitySettings>
+		<SetAffinity>false</SetAffinity>
+		<InverseAffinityList>false</InverseAffinityList>
+		<AffinityList/>
+	</AffinitySettings>
 </RcProgramInterpreter>

@@ -47,6 +47,7 @@ update_safety_config = null
 reset_kinematics_config = null
 read_joints_config = null
 update_joints_config = null
+flip_kinematics_chain_start = true
 joints_count = 6
 joints_with_positioners = 6
 set_current_pos_as_home = null
@@ -62,7 +63,7 @@ joints_data/joint_1_/joint_max_deg_or_mm = 183.0
 joints_data/joint_1_/allow_deustation = false
 joints_data/joint_1_/ignore_z_mark = false
 joints_data/joint_1_/acceleration_time_ms = 400.0
-joints_data/joint_1_/d_mm = 662.0
+joints_data/joint_1_/d_mm = 629.5
 joints_data/joint_1_/theta_deg = 0.0
 joints_data/joint_1_/r_mm = 330.0
 joints_data/joint_1_/alpha_deg = -90.0
@@ -80,15 +81,15 @@ joints_data/joint_2_/acceleration_time_ms = 400.0
 joints_data/joint_2_/d_mm = 0.0
 joints_data/joint_2_/theta_deg = -90.0
 joints_data/joint_2_/r_mm = 1135.0
-joints_data/joint_2_/alpha_deg = -180.0
+joints_data/joint_2_/alpha_deg = 0.0
 joints_data/joint_3_/joint_path = NodePath("Joint1/Joint2/Joint3")
 joints_data/joint_3_/home_position = 0.0
 joints_data/joint_3_/is_linear = false
 joints_data/joint_3_/reduction_rate = 100.0
 joints_data/joint_3_/speed_rpm = 3000.0
 joints_data/joint_3_/steps_per_revolution = 2000
-joints_data/joint_3_/joint_min_deg_or_mm = -80.0
-joints_data/joint_3_/joint_max_deg_or_mm = 130.0
+joints_data/joint_3_/joint_min_deg_or_mm = -130.0
+joints_data/joint_3_/joint_max_deg_or_mm = 80.0
 joints_data/joint_3_/allow_deustation = false
 joints_data/joint_3_/ignore_z_mark = false
 joints_data/joint_3_/acceleration_time_ms = 400.0
@@ -107,7 +108,7 @@ joints_data/joint_4_/joint_max_deg_or_mm = 220.0
 joints_data/joint_4_/allow_deustation = false
 joints_data/joint_4_/ignore_z_mark = false
 joints_data/joint_4_/acceleration_time_ms = 400.0
-joints_data/joint_4_/d_mm = 1203.0
+joints_data/joint_4_/d_mm = -1203.5
 joints_data/joint_4_/theta_deg = 0.0
 joints_data/joint_4_/r_mm = 0.0
 joints_data/joint_4_/alpha_deg = -90.0
@@ -123,9 +124,9 @@ joints_data/joint_5_/allow_deustation = false
 joints_data/joint_5_/ignore_z_mark = false
 joints_data/joint_5_/acceleration_time_ms = 400.0
 joints_data/joint_5_/d_mm = 0.0
-joints_data/joint_5_/theta_deg = -180.0
+joints_data/joint_5_/theta_deg = 0.0
 joints_data/joint_5_/r_mm = 0.0
-joints_data/joint_5_/alpha_deg = -90.0
+joints_data/joint_5_/alpha_deg = 90.0
 joints_data/joint_6_/joint_path = NodePath("Joint1/Joint2/Joint3/Joint4/Joint5/Joint6")
 joints_data/joint_6_/home_position = 0.0
 joints_data/joint_6_/is_linear = false
@@ -137,10 +138,10 @@ joints_data/joint_6_/joint_max_deg_or_mm = 360.0
 joints_data/joint_6_/allow_deustation = false
 joints_data/joint_6_/ignore_z_mark = false
 joints_data/joint_6_/acceleration_time_ms = 400.0
-joints_data/joint_6_/d_mm = 225.0
+joints_data/joint_6_/d_mm = -225.0
 joints_data/joint_6_/theta_deg = 180.0
 joints_data/joint_6_/r_mm = 0.0
-joints_data/joint_6_/alpha_deg = 0.0
+joints_data/joint_6_/alpha_deg = 180.0
 add_positioner = null
 read_signals_config = null
 update_signals_config = null
@@ -187,6 +188,7 @@ mesh = ExtResource( 2 )
 material/0 = null
 
 [node name="Joint1" type="RcsJoint" parent="."]
+isInverse = true
 
 [node name="j1_attach" type="AttachmentBase" parent="Joint1"]
 transform = Transform( -4.37114e-08, 0, -1, -1.64203e-15, 1, 0, 1, 8.35188e-23, -4.37114e-08, -320.561, 9.09495e-13, 263.805 )
@@ -319,7 +321,6 @@ material/0 = null
 
 [node name="Joint3" type="RcsJoint" parent="Joint1/Joint2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1135 )
-isInverse = true
 rotation_axis = Vector3( 0, 1, 0 )
 base_translation = Vector3( 0, 0, 1135 )
 
@@ -336,6 +337,7 @@ material/1 = null
 
 [node name="Joint4" type="RcsJoint" parent="Joint1/Joint2/Joint3"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 300 )
+isInverse = true
 rotation_axis = Vector3( 1, 0, 0 )
 base_translation = Vector3( 0, 0, 300 )
 
@@ -369,7 +371,6 @@ material/0 = null
 
 [node name="Joint5" type="RcsJoint" parent="Joint1/Joint2/Joint3/Joint4"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1203, 0, 0 )
-isInverse = true
 rotation_axis = Vector3( 0, 1, 0 )
 base_translation = Vector3( 1203, 0, 0 )
 
@@ -386,6 +387,7 @@ material/1 = null
 
 [node name="Joint6" type="RcsJoint" parent="Joint1/Joint2/Joint3/Joint4/Joint5"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 225, 0, 0 )
+isInverse = true
 rotation_axis = Vector3( 1, 0, 0 )
 base_translation = Vector3( 225, 0, 0 )
 

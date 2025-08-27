@@ -1,0 +1,14 @@
+[2025-08-27 12:25:46.749] [gcode_logger] [info] Python G-code extension created
+[2025-08-27 12:25:46.815] [gcode_logger] [info] started to apply gcode configuration
+[2025-08-27 12:25:46.815] [gcode_logger] [warning] [ConfigurationBuilder] can't find signal speed_set_signal
+[2025-08-27 12:25:46.815] [gcode_logger] [warning] reference frame instance is not found, name: World
+[2025-08-27 12:25:46.815] [gcode_logger] [info] config parsed successfully, apply it
+[2025-08-27 12:25:46.815] [gcode_logger] [info] config applied successfully
+[2025-08-27 12:25:46.815] [gcode_logger] [info] widget updated
+[2025-08-27 12:25:46.815] [gcode_logger] [warning] drills file not found using RcsData/Cnc/Drills.xml path
+[2025-08-27 12:25:46.815] [gcode_logger] [info] cnc magazine created with 0
+[2025-08-27 12:25:46.816] [gcode_logger] [warning] frames file not found using RcsData/Cnc/CncFrames.xml path
+[2025-08-27 12:25:49.634] [gcode_logger] [info] [GCodeRequestHandler] request: method IsRcsGCodeInterpreterEnabled, content: <?xml version="1.0" encoding="utf-8"?>
+, id 4
+[2025-08-27 12:25:49.634] [gcode_logger] [info] [Cnc] IsRcsGCodeInterpreterEnabled: send response 0000000112 00000000041<?xml version="1.0" encoding="utf-8"?>
+<RcsGCodeInterpreterEnabled>false</RcsGCodeInterpreterEnabled>

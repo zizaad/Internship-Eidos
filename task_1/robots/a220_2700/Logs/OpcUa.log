@@ -1,0 +1,6 @@
+[2025-08-27 12:25:46.841] [OpcUa] [warning] AccessControl: Unconfigured AccessControl. Users have all permissions.
+[2025-08-27 12:25:46.841] [OpcUa] [info] AccessControl: Anonymous login is enabled
+[2025-08-27 12:25:46.841] [OpcUa] [info] AccessControl: x509 certificate user authentication is enabled
+[2025-08-27 12:25:46.841] [OpcUa] [warning] Username/Password Authentication configured, but no encrypting SecurityPolicy. This can leak credentials on the network.
+[2025-08-27 12:25:46.841] [OpcUa] [warning] AcceptAll Certificate Verification. Any remote certificate will be accepted.
+[2025-08-27 12:25:46.843] [OpcUa] [info] TCP network layer listening on opc.tcp://Home-PC:4840/

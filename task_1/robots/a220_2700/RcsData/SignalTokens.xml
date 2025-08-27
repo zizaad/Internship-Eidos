@@ -1,1 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<Signal>
+	<Name>grab</Name>
+	<id>1</id>
+	<Address>o1.0.0</Address>
+	<IsInverted>false</IsInverted>
+	<ValType>Boolean</ValType>
+</Signal>

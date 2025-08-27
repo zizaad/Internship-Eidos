@@ -4,4 +4,8 @@
 		<Name>simulation_mode</Name>
 		<Value>true</Value>
 	</GlobalVariable>
+	<GlobalVariable>
+		<Name>sys_active_tool</Name>
+		<Value/>
+	</GlobalVariable>
 </GlobalVariables>

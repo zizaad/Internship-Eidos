@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScalableBufferSplineLog>
+	<LoggerParameters>
+		<FolderPath>/Logs/</FolderPath>
+		<RotationEnabled>false</RotationEnabled>
+		<RotationFilesCount>1</RotationFilesCount>
+		<MaxFileSize>5242880</MaxFileSize>
+		<LoggingLevel>info</LoggingLevel>
+	</LoggerParameters>
+</ScalableBufferSplineLog>
